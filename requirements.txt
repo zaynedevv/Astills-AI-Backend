@@ -29,3 +29,4 @@ typing_extensions==4.13.2
 urllib3==2.4.0
 uvicorn==0.34.2
 python-multipart==0.0.20
+python-decouple==3.8
