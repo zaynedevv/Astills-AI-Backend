@@ -30,7 +30,8 @@ def process_document_sample(
 ) -> None:
 
 
-    creds = os.environ.get("CREDENTIALS_JSON")
+    credsvar = os.environ.get("CREDENTIALS_JSON")
+    creds = json.loads(credsvar)
     credentials = service_account.Credentials.from_service_account_info(creds)
 
     client = documentai.DocumentProcessorServiceClient(
