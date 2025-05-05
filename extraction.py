@@ -29,7 +29,7 @@ def process_document_sample(
 ) -> None:
 
 
-    os.getenv("CREDENTIALS_JSON")
+    credentials_json = os.getenv("CREDENTIALS_JSON")
     creds = json.loads(credentials_json)
  
     credentials = service_account.Credentials.from_service_account_info(creds)
