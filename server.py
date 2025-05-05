@@ -1,7 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, Query
 from fastapi.responses import JSONResponse
 from extraction import process_document_sample
-from extractpages import extract_pdf_pages
 from fastapi.middleware.cors import CORSMiddleware
 
 
