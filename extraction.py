@@ -4,6 +4,9 @@ from google.api_core.client_options import ClientOptions
 from google.cloud import documentai  # type: ignore
 from google.oauth2 import service_account
 from enum import Enum
+import os
+import json
+
 
 
 class DocumentType(Enum):
@@ -24,9 +27,12 @@ def process_document_sample(
     field_mask: Optional[str] = None,
     processor_version_id: Optional[str] = None,
 ) -> None:
-    
+
+
+    os.getenv("CREDENTIALS_JSON")
+    creds = json.loads(credentials_json)
  
-    credentials = service_account.Credentials.from_service_account_file("./credentials.json")
+    credentials = service_account.Credentials.from_service_account_info(creds)
 
     client = documentai.DocumentProcessorServiceClient(
         credentials=credentials,
