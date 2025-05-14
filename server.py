@@ -43,11 +43,7 @@ async def parse_doc(file: UploadFile = File(...),
 
     try:
         result = process_document_sample(
-            project_id="926847902200",
-            location="us",
-            processor_id="4215eb5ca621cac0",
             image_content=file_content,
-            mime_type=file.content_type,
         )
 
         return JSONResponse(status_code=200, content={"message": "success", "document_type": document_type, "result": result})
