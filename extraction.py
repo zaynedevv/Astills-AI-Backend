@@ -4,10 +4,20 @@ from google.api_core.client_options import ClientOptions
 from google.cloud import documentai  # type: ignore
 from google.oauth2 import service_account
 from enum import Enum
+import requests
+import time
 import os
-import json
-from decouple import config
 
+
+model_url = "https://zayne.cognitiveservices.azure.com/formrecognizer/documentModels/primev3:analyze?api-version=2023-07-31"
+
+
+key = os.environ.get("AZURE_KEY")
+
+headers = {
+    "Ocp-Apim-Subscription-Key": key,
+    "Content-Type": "application/pdf"
+}
 
 
 class DocumentType(Enum):
@@ -20,65 +30,48 @@ class DocumentType(Enum):
 
 
 def process_document_sample(
-    project_id: str,
-    location: str,
-    processor_id: str,
     image_content: bytes,
-    mime_type: str,
-    field_mask: Optional[str] = None,
-    processor_version_id: Optional[str] = None,
 ) -> None:
-
-
-    credsvar = os.environ.get("CREDENTIALS_JSON")
-    creds = json.loads(credsvar)
-    credentials = service_account.Credentials.from_service_account_info(creds)
-
-    client = documentai.DocumentProcessorServiceClient(
-        credentials=credentials,
-        client_options=ClientOptions(api_endpoint=f"{location}-documentai.googleapis.com")
-    )
     
-    if processor_version_id:
-        # The full resource name of the processor version, e.g.:
-        # `projects/{project_id}/locations/{location}/processors/{processor_id}/processorVersions/{processor_version_id}`
-        name = client.processor_version_path(
-            project_id, location, processor_id, processor_version_id
-        )
-    else:
-        # The full resource name of the processor, e.g.:
-        # `projects/{project_id}/locations/{location}/processors/{processor_id}`
-        name = client.processor_path(project_id, location, processor_id)
-
-
-    # Load binary data
-    raw_document = documentai.RawDocument(content=image_content, mime_type=mime_type)
-
-  
-
-    # Configure the process request
-    request = documentai.ProcessRequest(
-        name=name,
-        raw_document=raw_document,
-        field_mask=field_mask,
-
-    )
-
-    result = client.process_document(request=request)
-
-    # For a full list of `Document` object attributes, reference this page:
-    # https://cloud.google.com/document-ai/docs/reference/rest/v1/Document
-    document = result.document
-
-    # Read the text recognition output from the processor
-    print("The document contains the following text:")
-    extracted_labels = {}
-    for entity in document.entities:
-        entity_text = entity.mention_text
-        extracted_labels[entity.type_] = entity_text
     
-    return extracted_labels
-        
+    response = requests.post(model_url, headers=headers, data=image_content)
 
+    # The response includes an operation-location for polling
+    operation_url = response.headers["Operation-Location"]
+
+    # Poll the result
+    while True:
+        result = requests.get(operation_url, headers={"Ocp-Apim-Subscription-Key": key})
+        result_json = result.json()
+        status = result_json["status"]
+        if status in ["succeeded", "failed"]:
+            break
+        time.sleep(2)
+
+
+    documents = result_json.get("analyzeResult", {}).get("documents", [])
+    final_fields = {}
+
+    for doc in documents:
+        fields = doc.get("fields", {})
+        for field_name, field_data in fields.items():
+            value = (
+                field_data.get("valueString") or
+                field_data.get("valueNumber") or
+                field_data.get("valueDate") or
+                field_data.get("valueTime") or
+                field_data.get("valueInteger") or
+                field_data.get("valuePhoneNumber") or
+                field_data.get("valueSelectionMark") or
+                field_data.get("valueCountryRegion") or
+                field_data.get("valueArray") or
+                field_data.get("valueObject") or
+                field_data.get("content")
+            )
+            final_fields[field_name] = value
+
+    return final_fields
+
+
+            
         
-       
