@@ -9,7 +9,7 @@ import time
 import os
 
 
-model_url = "https://zayne.cognitiveservices.azure.com/formrecognizer/documentModels/primev3:analyze?api-version=2023-07-31"
+model_url = "https://zayne.cognitiveservices.azure.com/formrecognizer/documentModels/primev4:analyze?api-version=2023-07-31"
 
 
 key = os.environ.get("AZURE_KEY")
