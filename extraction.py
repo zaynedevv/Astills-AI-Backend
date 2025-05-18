@@ -9,7 +9,6 @@ import time
 import os
 
 
-model_url = "https://zayne.cognitiveservices.azure.com/formrecognizer/documentModels/Finalv5:analyze?api-version=2023-07-31"
 
 
 key = os.environ.get("AZURE_KEY")
@@ -25,14 +24,22 @@ class DocumentType(Enum):
     APPLICATION_FEE = "application_fee"
     APPLICATION_NUMBER = "application_number"
 
-
+models = {
+    "BC": "bcv1",
+    "Source Funding": "Finalv5"
+}
 
 
 
 def process_document_sample(
     image_content: bytes,
+    lender
 ) -> None:
     
+    model = models[lender]
+            
+    model_url = f"https://zayne.cognitiveservices.azure.com/formrecognizer/documentModels/{model}{:analyze?api-version=2023-07-31"
+
     
     response = requests.post(model_url, headers=headers, data=image_content)
 
