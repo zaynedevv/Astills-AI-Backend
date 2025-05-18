@@ -25,7 +25,7 @@ class DocumentType(Enum):
     APPLICATION_NUMBER = "application_number"
 
 models = {
-    "BC": "bcv1",
+    "BC": "bcv2",
     "Source Funding": "Finalv5"
 }
 
