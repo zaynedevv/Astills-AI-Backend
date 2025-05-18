@@ -33,7 +33,7 @@ app.add_middleware(
 @app.post("/documents/parse")
 async def parse_doc(file: UploadFile = File(...), 
                     document_type: str = Query(...),
-                    lender: str = Query(...):
+                    lender: str = Query(...)):
     
     if file.content_type != "application/pdf":
         return JSONResponse(status_code=400, content={"error": "File must be a PDF."})
