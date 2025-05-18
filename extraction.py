@@ -38,7 +38,7 @@ def process_document_sample(
     
     model = models[lender]
             
-    model_url = f"https://zayne.cognitiveservices.azure.com/formrecognizer/documentModels/{model}{:analyze?api-version=2023-07-31"
+    model_url = f"https://zayne.cognitiveservices.azure.com/formrecognizer/documentModels/{model}:analyze?api-version=2023-07-31"
 
     
     response = requests.post(model_url, headers=headers, data=image_content)
