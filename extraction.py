@@ -26,7 +26,7 @@ class DocumentType(Enum):
 
 models = {
     "BC": "BcPROD",
-    "Source Funding": "Finalv5"
+    "Source Funding": "FinalV6"
 }
 
 
