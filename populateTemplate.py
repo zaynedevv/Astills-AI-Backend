@@ -14,8 +14,8 @@ def populateFile(templatePath, data, outputName):
     headers = {'content-type': 'application/json'}
 
     response = requests.post('https://au1.dws4.docmosis.com/api/render', headers = headers, json=json)
-
-    print(response.content)
+    if response.status_code != 200:
+        print(response.content)
     return response.content
 
 

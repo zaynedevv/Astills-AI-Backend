@@ -75,7 +75,13 @@ templateStructures = {
         "PROPDET1MORTGAGORS": "value1",
         "INSURANCEAMOUNT": "value2",
         "LOANSPECIALCONDITIONS": "value4",
-        "Guarantor2Fullname": "value5"
+        "Guarantor2Fullname": "value5",
+          "directors": [
+         
+        ],
+        "PROPDET1MORTGAGORS": "value4",
+        "INSURANCEAMOUNT": "value5",
+        "LOANSPECIALCONDITIONS": "value6"
     },
     'BC/Purchase/Standard': {
         'Company Guarantee Warranty (ShareHolders)': { 
@@ -117,27 +123,34 @@ templateStructures = {
             "Guarantor2Fullname": "value4"
         },
         'Disbursement Direction Authority Purchase': {
-            "Bordetallnames": "value1",
-            "Propdetallsecadd": "value2",
-            "ApplicationNumber": "value3",
-            "LOANNUMBER": "value4",
-            "Guarantor2Fullname": "value5",
-            "guarantor_3_name": None,
-            "Guarantor3Fullname": "value7",
-            "PROPDETALLSECADD": "value8",
-            "ADVANCEAMOUNT": "value9",
-            "valuation_fee": "value10",
-            "search_fee": "value11",
-            "property_state": "value12",
-            "NSW": "value13",
-            "VIC": "value14",
-            "QLD": "value15",
-            "SA": "value16",
-            "WA": "value17",
-            "ACT": "value18",
-            "TAS": "value19",
-            "NT": "value20"
-        },
+                                                    "Bordetallnames": "value1",
+                                                    "Propdetallsecadd": "value2",
+                                                    "ApplicationNumber": "value3",
+                                                    "LOANNUMBER": "value4",
+                                                    "Guarantor2Fullname": "value5",
+                                                    "guarantor_3_name": "value6",
+                                                    "Guarantor3Fullname": "value7",
+                                                    "PROPDETALLSECADD": "value8",
+                                                    "ADVANCEAMOUNT": "value9",
+                                                    "app_fee": "value10",
+                                                    "valuation_fee": "value11",
+                                                    "settlement_fee": "value12",
+                                                    "lender_protection_fee": "value13",
+                                                    "annual_package_fee": "value14",
+                                                    "documentation_fee": "value15",
+                                                    "trust_deed_review_fee": "value16",
+                                                    "sundry_fee": "value17",
+                                                    "search_fee": "value18",
+                                                    "property_state": "value19",
+                                                    "NSW": "NSW",
+                                                    "VIC": "VIC",
+                                                    "QLD": "QLD",
+                                                    "SA": "SA",
+                                                    "WA": "WA",
+                                                    "ACT": "ACT",
+                                                    "TAS": "TAS",
+                                                    "NT": "NT"
+                                                    },
         'Guarantee & Indemnity June 23': {
             "Bordetallnames": "value1",
             "BORDET1ACN": "value2",
@@ -328,11 +341,11 @@ templateStructures = {
             "PROPDET1MORTGAGORS": "value43",
             "Guarantor2Fullname": "value44",
             "Guarantor3Fullname": "value45",
-            "guarantor_4_name": "value46",
+            "guarantor_4_name": None,
             "Guarantor4Fullname": "value47",
-            "guarantor_5_name": "value48",
+            "guarantor_5_name": None,
             "Guarantor5Fullname": "value49",
-            "guarantor_6_name": "value50",
+            "guarantor_6_name": None,
             "Guarantor6Fullname": "value51"
         },
         'Mortgage Side Agreement': { 
@@ -503,27 +516,33 @@ templateStructures = {
             "Guarantor2Fullname": "value4"
         },
         'Disbursement Direction Authority Refi': {
-            "Bordetallnames": "value1",
-            "Propdetallsecadd": "value2",
-            "ApplicationNumber": "value3",
-            "LOANNUMBER": "value4",
-            "Guarantor2Fullname": "value5",
-            "guarantor_3_name": None,
-            "Guarantor3Fullname": "value7",
-            "PROPDETALLSECADD": "value8",
-            "ADVANCEAMOUNT": "value9",
-            "valuation_fee": "value10",
-            "search_fee": "value11",
-            "property_state": "value12",
-            "NSW": "value13",
-            "VIC": "value14",
-            "QLD": "value15",
-            "SA": "value16",
-            "WA": "value17",
-            "ACT": "value18",
-            "TAS": "value19",
-            "NT": "value20"
-        },
+                                            "Bordetallnames": "value1",
+                                            "Propdetallsecadd": "value2",
+                                            "ApplicationNumber": "value3",
+                                            "LOANNUMBER": "value4",
+                                            "Guarantor2Fullname": "value5",
+                                            "guarantor_3_name": None,
+                                            "Guarantor3Fullname": "value7",
+                                            "PROPDETALLSECADD": "value8",
+                                            "ADVANCEAMOUNT": "value9",
+                                            "app_fee": "value10",
+                                            "valuation_fee": "value11",
+                                            "settlement_fee": "value12",
+                                            "lender_protection_fee": "value13",
+                                            "documentation_fee": "value14",
+                                            "trust_deed_review_fee": "value15",
+                                            "sundry_fee": "value16",
+                                            "search_fee": "value17",
+                                            "property_state": "value18",
+                                            "NSW": "value19",
+                                            "VIC": "value20",
+                                            "QLD": "value21",
+                                            "SA": "value22",
+                                            "WA": "value23",
+                                            "ACT": "value24",
+                                            "TAS": "value25",
+                                            "NT": "value26"
+                                            },
         'Guarantee & Indemnity June 23': {
             "Bordetallnames": "value1",
             "BORDET1ACN": "value2",
@@ -714,11 +733,11 @@ templateStructures = {
             "PROPDET1MORTGAGORS": "value43",
             "Guarantor2Fullname": "value44",
             "Guarantor3Fullname": "value45",
-            "guarantor_4_name": "value46",
+            "guarantor_4_name": None,
             "Guarantor4Fullname": "value47",
-            "guarantor_5_name": "value48",
+            "guarantor_5_name": None,
             "Guarantor5Fullname": "value49",
-            "guarantor_6_name": "value50",
+            "guarantor_6_name": None,
             "Guarantor6Fullname": "value51"
         },
         'Mortgage Side Agreement': { 
@@ -767,87 +786,760 @@ templateStructures = {
     },
     'BC/Refi/LoanAgreement': {
         'Loan Agreement Offer IO': {
-            "Bordetallnames": "value1",
-            "BORDET1ACN": "value2",
-            "bordet1trustname": "value3",
-            "PROPDETALLSECADD": "value4",
-            "LoanNumber": "value5",
-            "LOANPRODUCTTYPE": "value6",
-            "ADVANCEAMOUNT": "value7",
-            "IOInterestRate": "value8",
-            "standardinterestrate": "value9",
-            "IOTerm": "value10",
-            "RepaymentAmount": "value11",
-            "IORepayments": "value12",
-            "PIRepayments": "value13",
-            "app_fee": "value14",
-            "lender_protection_fee": "value15",
-            "ValFee": "value16",
-            "documentation_fee": "value17",
-            "MtgRegFee": "value18",
-            "facilityterm": "value19",
-            "BORDET1FULLNAMESAL": "value20",
-            "BORDET1ADDRESSLINE1": "value21",
-            "BORDET1SUBURB": "value22",
-            "BORDET1STATE": "value23",
-            "BORDET1postcode": "value24",
-            "BORDET1EMAILADDRESS": "value25",
-            "PROPDET1MORTGAGORS": "value26",
-            "GUARANTOR1ADDRESSLINE1": "value27",
-            "GUARANTOR1SUBURB": "value28",
-            "GUARANTOR1STATE": "value29",
-            "GUARANTOR1POSTCODE": "value30",
-            "LOANPURPOSE": "value31",
-            "LVR": "value32",
-            "GUARANTOR2FULLNAME": "value33",
-            "GUARANTOR3FULLNAME": "value34",
-            "advanceamount": "value35",
-            "LOANSPECIALCONDITIONS": "value36",
-            "DefaultInterestRate": "value37",
-            "guarantor_2_name": "value38",
-            "Guarantor3Fullname": "value39",
-            "Guarantor2Fullname": "value40"
-    },
+                                    "Bordetallnames": "value1",
+                                    "BORDET1ACN": "value2",
+                                    "bordet1trustname": "value3",
+                                    "PROPDETALLSECADD": "value4",
+                                    "LoanNumber": "value5",
+                                    "LOANPRODUCTTYPE": "value6",
+                                    "ADVANCEAMOUNT": "value7",
+                                    "IOInterestRate": "value8",
+                                    "standardinterestrate": "value9",
+                                    "IOTerm": "value10",
+                                    "RepaymentAmount": "value11",
+                                    "IORepayments": "value12",
+                                    "PIRepayments": "value13",
+                                    "app_fee": "value14",
+                                    "lender_protection_fee": "value15",
+                                    "annual_facility_fee": "value16",
+                                    "ValFee": "value17",
+                                    "settlement_fee": "value18",
+                                    "documentation_fee": "value19",
+                                    "trust_deed_review_fee": "value20",
+                                    "bank_cheque_fee": None,
+                                    "MtgRegFee": "value22",
+                                    "facilityterm": "value23",
+                                    "BORDET1FULLNAMESAL": "value24",
+                                    "BORDET1ADDRESSLINE1": "value25",
+                                    "BORDET1SUBURB": "value26",
+                                    "BORDET1STATE": "value27",
+                                    "BORDET1postcode": "value28",
+                                    "BORDET1EMAILADDRESS": "value29",
+                                    "PROPDET1MORTGAGORS": "value30",
+                                    "GUARANTOR1ADDRESSLINE1": "value31",
+                                    "GUARANTOR1SUBURB": "value32",
+                                    "GUARANTOR1STATE": "value33",
+                                    "GUARANTOR1POSTCODE": "value34",
+                                    "LOANPURPOSE": "value35",
+                                    "LVR": "value36",
+                                    "GUARANTOR2FULLNAME": "value37",
+                                    "GUARANTOR3FULLNAME": "value38",
+                                    "advanceamount": "value39",
+                                    "LOANSPECIALCONDITIONS": "value40",
+                                    "DefaultInterestRate": "value41",
+                                    "BORDET1FULLNAME": "value42",
+                                    "BORDET1TRUSTNAME": "value43",
+                                    "guarantor_2_name": None,
+                                    "guarantor_3_name": None
+                                    },
     'Loan Agreement Offer PI': {
-            "Bordetallnames": "value1",
-            "BORDET1ACN": "value2",
-            "BORDET1TRUSTNAME": "value3",
-            "PROPDETALLSECADD": "value4",
-            "LOANNUMBER": "value5",
-            "LOANPRODUCTTYPE": "value6",
-            "ADVANCEAMOUNT": "value7",
-            "IOInterestRate": "value8",
-            "standardinterestrate": "value9",
-            "IOTerm": "value10",
-            "RepaymentAmount": "value11",
-            "IORepayments": "value12",
-            "PIRepayments": "value13",
-            "app_fee": "value14",
-            "lender_protection_fee": "value15",
-            "ValFee": "value16",
-            "documentation_fee": "value17",
-            "MtgRegFee": "value18",
-            "facilityterm": "value19",
-            "BORDET1FULLNAMESAL": "value20",
-            "BORDET1ADDRESSLINE1": "value21",
-            "BORDET1SUBURB": "value22",
-            "BORDET1STATE": "value23",
-            "BORDET1POSTCODE": "value24",
-            "BORDET1EMAILADDRESS": "value25",
-            "PROPDET1MORTGAGORS": "value26",
-            "GUARANTOR1ADDRESSLINE1": "value27",
-            "GUARANTOR1SUBURB": "value28",
-            "GUARANTOR1STATE": "value29",
-            "GUARANTOR1POSTCODE": "value30",
-            "LOANPURPOSE": "value31",
-            "LVR": "value32",
-            "Guarantor2Fullname": "value33",
-            "Guarantor3Fullname": "value34",
-            "LOANSPECIALCONDITIONS": "value35",
-            "DefaultInterestRate": "value36",
-            "guarantor_2_name": "value37",
-            "guarantor_3_name": None
-    }
+                                "BORDET1FULLNAMESAL": "value1",
+                                "BORDET1ACN": "value2",
+                                "bordet1trustname": "value3",
+                                "BORDET1ADDRESSLINE1": "value4",
+                                "BORDET1SUBURB": "value5",
+                                "BORDET1STATE": "value6",
+                                "BORDET1postcode": "value7",
+                                "BORDET1EMAILADDRESS": "value8",
+                                "PROPDETALLSECADD": "value9",
+                                "LoanNumber": "value10",
+                                "LOANPRODUCTTYPE": "value11",
+                                "ADVANCEAMOUNT": "value12",
+                                "standardinterestrate": "value13",
+                                "RepaymentAmount": "value14",
+                                "PIRepayments": "value15",
+                                "app_fee": "value16",
+                                "ValFee": "value17",
+                                "lender_protection_fee": "value18",
+                                "annual_facility_fee": "value19",
+                                "settlement_fee": "value20",
+                                "documentation_fee": "value21",
+                                "trust_deed_review_fee": "value22",
+                                "bank_cheque_fee": None,
+                                "MtgRegFee": "value24",
+                                "facilityterm": "value25",
+                                "GUARANTOR1FULLNAME": "value26",
+                                "GUARANTOR1ACN": "value27",
+                                "GUARANTOR1ADDRESSLINE1": "value28",
+                                "GUARANTOR1SUBURB": "value29",
+                                "GUARANTOR1STATE": "value30",
+                                "GUARANTOR1POSTCODE": "value31",
+                                "LVR": "value32",
+                                "GUARANTOR2FULLNAME": "value33",
+                                "GUARANTOR3FULLNAME": "value34",
+                                "advanceamount": "value35",
+                                "LOANSPECIALCONDITIONS": "value36",
+                                "DefaultInterestRate": "value37",
+                                "BORDET1FULLNAME": "value38",
+                                "BORDET1TRUSTNAME": "value39",
+                                "guarantor_2_name": None,
+                                "guarantor_3_name": None
+                                }
+    },
+    'Source/Purchase/Standard': {
+        'Direct Debit Request': {
+                                "BORDET1FULLNAMESAL": "value1",
+                                "BORDET1ACN": "value2",
+                                "bordet1trustname": "value3",
+                                "BORDET1ADDRESSLINE1": "value4",
+                                "BORDET1SUBURB": "value5",
+                                "BORDET1STATE": "value6",
+                                "BORDET1postcode": "value7",
+                                "BORDET1EMAILADDRESS": "value8",
+                                "LOANNumber": "value9",
+                                "Guarantor2FULLNAME": "value10"
+                                },
+        'Disbursement Direction Authority Source': {
+                                                "Propdetallsecadd": "value1",
+                                                "Bordetallnames": "value2",
+                                                "BORDET1ACN": "value3",
+                                                "guarantor_2_name": "value4",
+                                                "guarantor_3_name": None,
+                                                "GUARANTOR1FULLNAME": "value6",
+                                                "GUARANTOR1ACN": "value7",
+                                                "directors": [
+                                                ],
+                                                "loannumber": "value11",
+                                                "Lender": "value12",
+                                                "lendercharges": [
+                                                   
+                                                ],
+                                                "faocharges": [
+                                                   
+                                                ],
+                                                "balanceavailableforsettlement": "value25",
+                                                "advanceamount": "value26",
+                                                "BORDET1FULLNAME": "value27"
+                                                },
+        'Guarantee SMSF Holding Trustee': {
+                                            "Guarantor1FullName": "value1",
+                                            "GUARANTOR1TRUSTNAME": "value2",
+                                            "Guarantor1ACN": "value3",
+                                            "GUARANTOR1ADDRESSLINE1": "value4",
+                                            "GUARANTOR1SUBURB": "value5",
+                                            "GUARANTOR1STATE": "value6",
+                                            "GUARANTOR1POSTCODE": "value7",
+                                            "BORDET1FULLNAMESAL": "value8",
+                                            "bordet1trustname": "value9",
+                                            "BORDET1ACN": "value10",
+                                            "BORDET1ADDRESSLINE1": "value11",
+                                            "BORDET1SUBURB": "value12",
+                                            "BORDET1STATE": "value13",
+                                            "BORDET1POSTCODE": "value14",
+                                            "GUARANTOR1FULLNAME": "value15",
+                                            "GUARANTOR1ACN": "value16",
+                                            "Guarantor2FullName": "value17"
+                                        },
+        'National Mortgage Form ACT Source': {
+            "MATTERNUMBER": "value1",
+            "PROPDET1TITREF": "value2",
+            "PROPDET1LOTDESC": "value3",
+            "GUARANTOR1FULLNAME": "value4",
+            "Guarantor1ACN": "value5",
+            "GUARANTOR2FULLNAME": "value6",
+            "GUAraNTOR1FULLNAME": "value7"
+            },
+        'National Mortgage Form NSW Source': {
+            "MATTERNUMBER": "value1",
+            "PROPDET1TITREF": "value2",
+            "GUARANTOR1FULLNAME": "value3",
+            "Guarantor1ACN": "value4",
+            "Guarantor2FullName": "value5"
+            },
+        'National Mortgage Form QLD Source': {
+            "MATTERNUMBER": "value1",
+            "PROPDET1TITREF": "value2",
+            "PROPDET1LOTDESC": "value3",
+            "GUARANTOR1FULLNAME": "value4",
+            "Guarantor1ACN": "value5",
+            "GUAraNTOR1FULLNAME": "value6",
+            "GUARANTOR2FULLNAME": "value7"
+            },
+        'National Mortgage Form SA Source': {
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "GUARANTOR1FULLNAME": "value3",
+                                            "Guarantor1ACN": "value4",
+                                            "BORDET1ADDRESSLINE1": "value5",
+                                            "BORDET1SUBURB": "value6",
+                                            "BORDET1STATE": "value7",
+                                            "BORDET1POSTCODE": "value8",
+                                            "GUAraNTOR1FULLNAME": "value9",
+                                            "Guarantor2FullName": "value10"
+                                            },
+        'National Mortgage Form VIC Source': {
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "GUARANTOR1FULLNAME": "value3",
+                                            "Guarantor1ACN": "value4",
+                                            "GUARANTOR2FULLNAME": "value5",
+                                            "GUAraNTOR1FULLNAME": "value6"
+                                            },
+        'Privacy Policy Collection Notice': {
+                                            "Bordetallnames": "value1",
+                                            "BORDET1ACN": "value2",
+                                            "bordet1trustname": "value3",
+                                            "Guarantor2FullName": "value4"
+                                            },
+        'Purchase Acknowledgement Legal Financial Advice': {
+                                                            "Bordetallnames": "value1",
+                                                            "BORDET1ACN": "value2",
+                                                            "LOANNumber": "value3",
+                                                            "directors": "value4"
+                                                            },
+        'SMSF Member Guarantee': {
+                                "directors": [
+                                    {
+                                    "GuarantorFullName": "value1",
+                                    "GUARANTORADDRESSLINE1": "value2",
+                                    "GUARANTORSUBURB": "value3",
+                                    "GUARANTORSTATE": "value4",
+                                    "GUARANTORPOSTCODE": "value5"
+                                    },
+                                    {
+                                    "GuarantorFullName": "value6",
+                                    "GUARANTORADDRESSLINE1": "value7",
+                                    "GUARANTORSUBURB": "value8",
+                                    "GUARANTORSTATE": "value9",
+                                    "GUARANTORPOSTCODE": "value10"
+                                    },
+                                    {
+                                    "GuarantorFullName": "value11",
+                                    "GUARANTORADDRESSLINE1": "value12",
+                                    "GUARANTORSUBURB": "value13",
+                                    "GUARANTORSTATE": "value14",
+                                    "GUARANTORPOSTCODE": "value15"
+                                    }
+                                ],
+                                "BORDET1FULLNAMESAL": "value16",
+                                "bordet1trustname": "value17",
+                                "BORDET1ACN": "value18",
+                                "BORDET1ADDRESSLINE1": "value19",
+                                "BORDET1SUBURB": "value20",
+                                "BORDET1STATE": "value21",
+                                "BORDET1POSTCODE": "value22",
+                                "Guarantor1FullName": "value23",
+                                "GUARANTOR1TRUSTNAME": "value24",
+                                "Guarantor1ACN": "value25",
+                                "GUARANTOR1ADDRESSLINE1": "value26",
+                                "GUARANTOR1SUBURB": "value27",
+                                "GUARANTOR1STATE": "value28",
+                                "GUARANTOR1POSTCODE": "value29",
+                                "GUARANTOR2FULLNAME": "value30",
+                                "guarantor_3_name": None,
+                                "GUARANTOR3FULLNAME": "value32",
+                                "guarantor_4_name": None,
+                                "GUARANTOR4FULLNAME": "value34",
+                                "guarantor_5_name": None,
+                                "GUARANTOR5FULLNAME": "value36"
+                                },
+        '1. Credit Guide': {},
+        '2. Loan General Terms': {},
+        '3. Mortgage Common Provisions': {},
+        'Legal Advice Declaration NSW Guarantor': {
+            "plinitials": "value1",
+            "matternumber": "value2",
+            "Guarantor2FULLNAME": "value3",
+            "GUARANTOR2ADDRESSLINE1": "value4",
+            "GUARANTOR2SUBURB": "value5",
+            "GUARANTOR2STATE": "value6",
+            "GUARANTOR2POSTCODE": "value7",
+            "BORDET1FULLNAMESAL": "value8",
+            "BORDET1ACN": "value9",
+            "bordet1trustname": "value10",
+            "Propdetallsecadd": "value11"
+            }
+
+        
+    },
+    'Source/Purchase/LoanAgreement': {
+        'SMSF IO Loan Agreement': {
+                                    "Bordetallnames": "value1",
+                                    "BORDET1ACN": "value2",
+                                    "BORDET1TRUSTNAME": "value3",
+                                    "BORDET1ADDRESSLINE1": "value4",
+                                    "BORDET1SUBURB": "value5",
+                                    "BORDET1STATE": "value6",
+                                    "BORDET1postcode": "value7",
+                                    "LOANNumber": "value8",
+                                    "ADVANCEAMOUNT": "value9",
+                                    "standardinterestrate": "value10",
+                                    "facilityterm": "value11",
+                                    "PIRepayments": "value12",
+                                    "IOTerm": "value13",
+                                    "RepaymentAmount": "value14",
+                                    "number_of_repayments": "value15",
+                                    "charge": [
+                                        {
+                                        "charge_name": "value16",
+                                        "charge_amount": "value17"
+                                        },
+                                        {
+                                        "charge_name": "value18",
+                                        "charge_amount": "value19"
+                                        },
+                                        {
+                                        "charge_name": "value20",
+                                        "charge_amount": "value21"
+                                        }
+                                    ],
+                                    "mortgage_registration_fee": "value22",
+                                    "security_duty": None,
+                                    "LMI_Fee": None,
+                                    "annual_facility_fee": None,
+                                    "monthly_facility_fee": None,
+                                    "LoanPurposeDetail": "value27",
+                                    "DefaultInterestRate": "value28",
+                                    "LOANSPECIALCONDITIONS": "value29",
+                                    "PROPDET1MORTGAGORS": "value30",
+                                    "PROPDETALLSECADD": "value31",
+                                    "PROPDET1TITREF": "value32",
+                                    "GUARANTOR1FULLNAME": "value33",
+                                    "GUARANTOR1ACN": "value34",
+                                    "Guarantor1FullName": "value35",
+                                    "GUARANTOR1ADDRESSLINE1": "value36",
+                                    "GUARANTOR1SUBURB": "value37",
+                                    "GUARANTOR1STATE": "value38",
+                                    "GUARANTOR1POSTCODE": "value39",
+                                    "directors": [
+                                        {
+                                        "guarantor_name": "value40",
+                                        "guarantor_address": "value41",
+                                        "guarantor_suburb": "value42",
+                                        "guarantor_state": "value43",
+                                        "guarantor_postcode": "value44"
+                                        },
+                                        {
+                                        "guarantor_name": "value45",
+                                        "guarantor_address": "value46",
+                                        "guarantor_suburb": "value47",
+                                        "guarantor_state": "value48",
+                                        "guarantor_postcode": "value49"
+                                        },
+                                        {
+                                        "guarantor_name": "value50",
+                                        "guarantor_address": "value51",
+                                        "guarantor_suburb": "value52",
+                                        "guarantor_state": "value53",
+                                        "guarantor_postcode": "value54"
+                                        }
+                                    ],
+                                    "BORDET1FULLNAMESAL": "value55",
+                                    "BORDET1TRUSTDATE": "value56",
+                                    "GUARANTOR1TRUSTNAME": "value57",
+                                    "GUARANTOR1TRUSTDATE": "value58",
+                                    "guarantor_2_name": "value59",
+                                    "guarantor_3_name": None
+                                    },
+        'Loan Agreement SMSF PI': {
+                                    "Bordetallnames": "value1",
+                                    "BORDET1ACN": "value2",
+                                    "BORDET1TRUSTNAME": "value3",
+                                    "BORDET1ADDRESSLINE1": "value4",
+                                    "BORDET1SUBURB": "value5",
+                                    "BORDET1STATE": "value6",
+                                    "BORDET1postcode": "value7",
+                                    "LOANNumber": "value8",
+                                    "ADVANCEAMOUNT": "value9",
+                                    "standardinterestrate": "value10",
+                                    "facilityterm": "value11",
+                                    "PIRepayments": "value12",
+                                    "RepaymentAmount": "value13",
+                                    "number_of_repayments": "value14",
+                                    "charges": [
+                                        {
+                                        "charge_name": "value15",
+                                        "charge_amount": "value16"
+                                        },
+                                        {
+                                        "charge_name": "value17",
+                                        "charge_amount": "value18"
+                                        },
+                                        {
+                                        "charge_name": "value19",
+                                        "charge_amount": "value20"
+                                        }
+                                    ],
+                                    "mortgage_registration_fee": "value21",
+                                    "security_duty": None,
+                                    "LMI_Fee": None,
+                                    "annual_facility_fee": None,
+                                    "monthly_facility_fee": None,
+                                    "LoanPurposeDetail": "value26",
+                                    "DefaultInterestRate": "value27",
+                                    "LOANSPECIALCONDITIONS": "value28",
+                                    "PROPDET1MORTGAGORS": "value29",
+                                    "PROPDETALLSECADD": "value30",
+                                    "PROPDET1TITREF": "value31",
+                                    "GUARANTOR1FULLNAME": "value32",
+                                    "GUARANTOR1ACN": "value33",
+                                    "Guarantor1FullName": "value34",
+                                    "GUARANTOR1ADDRESSLINE1": "value35",
+                                    "GUARANTOR1SUBURB": "value36",
+                                    "GUARANTOR1STATE": "value37",
+                                    "GUARANTOR1POSTCODE": "value38",
+                                    "directors": [
+                                        {
+                                        "guarantor_name": "value39",
+                                        "guarantor_address": "value40",
+                                        "guarantor_suburb": "value41",
+                                        "guarantor_state": "value42",
+                                        "guarantor_postcode": "value43"
+                                        },
+                                        {
+                                        "guarantor_name": "value44",
+                                        "guarantor_address": "value45",
+                                        "guarantor_suburb": "value46",
+                                        "guarantor_state": "value47",
+                                        "guarantor_postcode": "value48"
+                                        },
+                                        {
+                                        "guarantor_name": "value49",
+                                        "guarantor_address": "value50",
+                                        "guarantor_suburb": "value51",
+                                        "guarantor_state": "value52",
+                                        "guarantor_postcode": "value53"
+                                        }
+                                    ],
+                                    "BORDET1FULLNAMESAL": "value54",
+                                    "BORDET1TRUSTDATE": "value55",
+                                    "GUARANTOR1TRUSTNAME": "value56",
+                                    "GUARANTOR1TRUSTDATE": "value57",
+                                    "guarantor_2_name": "value58",
+                                    "guarantor_3_name": None
+                                    },
+    },
+    "Source/Refi/Standard": {
+        'Direct Debit Request': {
+                                "BORDET1FULLNAMESAL": "value1",
+                                "BORDET1ACN": "value2",
+                                "bordet1trustname": "value3",
+                                "BORDET1ADDRESSLINE1": "value4",
+                                "BORDET1SUBURB": "value5",
+                                "BORDET1STATE": "value6",
+                                "BORDET1postcode": "value7",
+                                "BORDET1EMAILADDRESS": "value8",
+                                "LOANNumber": "value9",
+                                "Guarantor2FULLNAME": "value10"
+                                },
+        'Disbursement Direction Authority Source': {
+                                                "Propdetallsecadd": "value1",
+                                                "Bordetallnames": "value2",
+                                                "BORDET1ACN": "value3",
+                                                "guarantor_2_name": "value4",
+                                                "guarantor_3_name": None,
+                                                "GUARANTOR1FULLNAME": "value6",
+                                                "GUARANTOR1ACN": "value7",
+                                                "directors": [
+                                                ],
+                                                "loannumber": "value11",
+                                                "Lender": "value12",
+                                                "lendercharges": [
+                                                   
+                                                ],
+                                                "faocharges": [
+                                                   
+                                                ],
+                                                "balanceavailableforsettlement": "value25",
+                                                "advanceamount": "value26",
+                                                "BORDET1FULLNAME": "value27"
+                                                },
+        'Guarantee SMSF Holding Trustee': {
+                                            "Guarantor1FullName": "value1",
+                                            "GUARANTOR1TRUSTNAME": "value2",
+                                            "Guarantor1ACN": "value3",
+                                            "GUARANTOR1ADDRESSLINE1": "value4",
+                                            "GUARANTOR1SUBURB": "value5",
+                                            "GUARANTOR1STATE": "value6",
+                                            "GUARANTOR1POSTCODE": "value7",
+                                            "BORDET1FULLNAMESAL": "value8",
+                                            "bordet1trustname": "value9",
+                                            "BORDET1ACN": "value10",
+                                            "BORDET1ADDRESSLINE1": "value11",
+                                            "BORDET1SUBURB": "value12",
+                                            "BORDET1STATE": "value13",
+                                            "BORDET1POSTCODE": "value14",
+                                            "GUARANTOR1FULLNAME": "value15",
+                                            "GUARANTOR1ACN": "value16",
+                                            "Guarantor2FullName": "value17"
+                                        },
+        'National Mortgage Form ACT Source': {
+            "MATTERNUMBER": "value1",
+            "PROPDET1TITREF": "value2",
+            "PROPDET1LOTDESC": "value3",
+            "GUARANTOR1FULLNAME": "value4",
+            "Guarantor1ACN": "value5",
+            "GUARANTOR2FULLNAME": "value6",
+            "GUAraNTOR1FULLNAME": "value7"
+            },
+        'National Mortgage Form NSW Source': {
+            "MATTERNUMBER": "value1",
+            "PROPDET1TITREF": "value2",
+            "GUARANTOR1FULLNAME": "value3",
+            "Guarantor1ACN": "value4",
+            "Guarantor2FullName": "value5"
+            },
+        'National Mortgage Form QLD Source': {
+            "MATTERNUMBER": "value1",
+            "PROPDET1TITREF": "value2",
+            "PROPDET1LOTDESC": "value3",
+            "GUARANTOR1FULLNAME": "value4",
+            "Guarantor1ACN": "value5",
+            "GUAraNTOR1FULLNAME": "value6",
+            "GUARANTOR2FULLNAME": "value7"
+            },
+        'National Mortgage Form SA Source': {
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "GUARANTOR1FULLNAME": "value3",
+                                            "Guarantor1ACN": "value4",
+                                            "BORDET1ADDRESSLINE1": "value5",
+                                            "BORDET1SUBURB": "value6",
+                                            "BORDET1STATE": "value7",
+                                            "BORDET1POSTCODE": "value8",
+                                            "GUAraNTOR1FULLNAME": "value9",
+                                            "Guarantor2FullName": "value10"
+                                            },
+        'National Mortgage Form VIC Source': {
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "GUARANTOR1FULLNAME": "value3",
+                                            "Guarantor1ACN": "value4",
+                                            "GUARANTOR2FULLNAME": "value5",
+                                            "GUAraNTOR1FULLNAME": "value6"
+                                            },
+        'Privacy Policy Collection Notice': {
+                                            "Bordetallnames": "value1",
+                                            "BORDET1ACN": "value2",
+                                            "bordet1trustname": "value3",
+                                            "Guarantor2FullName": "value4"
+                                            },
+        'Purchase Acknowledgement Legal Financial Advice': {
+                                                            "Bordetallnames": "value1",
+                                                            "BORDET1ACN": "value2",
+                                                            "LOANNumber": "value3",
+                                                            "directors": "value4"
+                                                            },
+        'SMSF Member Guarantee': {
+                                "directors": [
+                                    {
+                                    "GuarantorFullName": "value1",
+                                    "GUARANTORADDRESSLINE1": "value2",
+                                    "GUARANTORSUBURB": "value3",
+                                    "GUARANTORSTATE": "value4",
+                                    "GUARANTORPOSTCODE": "value5"
+                                    },
+                                    {
+                                    "GuarantorFullName": "value6",
+                                    "GUARANTORADDRESSLINE1": "value7",
+                                    "GUARANTORSUBURB": "value8",
+                                    "GUARANTORSTATE": "value9",
+                                    "GUARANTORPOSTCODE": "value10"
+                                    },
+                                    {
+                                    "GuarantorFullName": "value11",
+                                    "GUARANTORADDRESSLINE1": "value12",
+                                    "GUARANTORSUBURB": "value13",
+                                    "GUARANTORSTATE": "value14",
+                                    "GUARANTORPOSTCODE": "value15"
+                                    }
+                                ],
+                                "BORDET1FULLNAMESAL": "value16",
+                                "bordet1trustname": "value17",
+                                "BORDET1ACN": "value18",
+                                "BORDET1ADDRESSLINE1": "value19",
+                                "BORDET1SUBURB": "value20",
+                                "BORDET1STATE": "value21",
+                                "BORDET1POSTCODE": "value22",
+                                "Guarantor1FullName": "value23",
+                                "GUARANTOR1TRUSTNAME": "value24",
+                                "Guarantor1ACN": "value25",
+                                "GUARANTOR1ADDRESSLINE1": "value26",
+                                "GUARANTOR1SUBURB": "value27",
+                                "GUARANTOR1STATE": "value28",
+                                "GUARANTOR1POSTCODE": "value29",
+                                "GUARANTOR2FULLNAME": "value30",
+                                "guarantor_3_name": None,
+                                "GUARANTOR3FULLNAME": "value32",
+                                "guarantor_4_name": None,
+                                "GUARANTOR4FULLNAME": "value34",
+                                "guarantor_5_name": None,
+                                "GUARANTOR5FULLNAME": "value36"
+                                },
+        '1. Credit Guide': {},
+        '2. Loan General Terms': {},
+        '3. Mortgage Common Provisions': {},
+        'Legal Advice Declaration NSW Guarantor': {
+            "plinitials": "value1",
+            "matternumber": "value2",
+            "Guarantor2FULLNAME": "value3",
+            "GUARANTOR2ADDRESSLINE1": "value4",
+            "GUARANTOR2SUBURB": "value5",
+            "GUARANTOR2STATE": "value6",
+            "GUARANTOR2POSTCODE": "value7",
+            "BORDET1FULLNAMESAL": "value8",
+            "BORDET1ACN": "value9",
+            "bordet1trustname": "value10",
+            "Propdetallsecadd": "value11"
+            }
+
+    },
+    "Source/Refi/LoanAgreement": {
+                'SMSF IO Loan Agreement': {
+                                    "Bordetallnames": "value1",
+                                    "BORDET1ACN": "value2",
+                                    "BORDET1TRUSTNAME": "value3",
+                                    "BORDET1ADDRESSLINE1": "value4",
+                                    "BORDET1SUBURB": "value5",
+                                    "BORDET1STATE": "value6",
+                                    "BORDET1postcode": "value7",
+                                    "LOANNumber": "value8",
+                                    "ADVANCEAMOUNT": "value9",
+                                    "standardinterestrate": "value10",
+                                    "facilityterm": "value11",
+                                    "PIRepayments": "value12",
+                                    "IOTerm": "value13",
+                                    "RepaymentAmount": "value14",
+                                    "number_of_repayments": "value15",
+                                    "charge": [
+                                        {
+                                        "charge_name": "value16",
+                                        "charge_amount": "value17"
+                                        },
+                                        {
+                                        "charge_name": "value18",
+                                        "charge_amount": "value19"
+                                        },
+                                        {
+                                        "charge_name": "value20",
+                                        "charge_amount": "value21"
+                                        }
+                                    ],
+                                    "mortgage_registration_fee": "value22",
+                                    "security_duty": None,
+                                    "LMI_Fee": None,
+                                    "annual_facility_fee": None,
+                                    "monthly_facility_fee": None,
+                                    "LoanPurposeDetail": "value27",
+                                    "DefaultInterestRate": "value28",
+                                    "LOANSPECIALCONDITIONS": "value29",
+                                    "PROPDET1MORTGAGORS": "value30",
+                                    "PROPDETALLSECADD": "value31",
+                                    "PROPDET1TITREF": "value32",
+                                    "GUARANTOR1FULLNAME": "value33",
+                                    "GUARANTOR1ACN": "value34",
+                                    "Guarantor1FullName": "value35",
+                                    "GUARANTOR1ADDRESSLINE1": "value36",
+                                    "GUARANTOR1SUBURB": "value37",
+                                    "GUARANTOR1STATE": "value38",
+                                    "GUARANTOR1POSTCODE": "value39",
+                                    "directors": [
+                                        {
+                                        "guarantor_name": "value40",
+                                        "guarantor_address": "value41",
+                                        "guarantor_suburb": "value42",
+                                        "guarantor_state": "value43",
+                                        "guarantor_postcode": "value44"
+                                        },
+                                        {
+                                        "guarantor_name": "value45",
+                                        "guarantor_address": "value46",
+                                        "guarantor_suburb": "value47",
+                                        "guarantor_state": "value48",
+                                        "guarantor_postcode": "value49"
+                                        },
+                                        {
+                                        "guarantor_name": "value50",
+                                        "guarantor_address": "value51",
+                                        "guarantor_suburb": "value52",
+                                        "guarantor_state": "value53",
+                                        "guarantor_postcode": "value54"
+                                        }
+                                    ],
+                                    "BORDET1FULLNAMESAL": "value55",
+                                    "BORDET1TRUSTDATE": "value56",
+                                    "GUARANTOR1TRUSTNAME": "value57",
+                                    "GUARANTOR1TRUSTDATE": "value58",
+                                    "guarantor_2_name": "value59",
+                                    "guarantor_3_name": None
+                                    },
+        'Loan Agreement SMSF PI': {
+                                    "Bordetallnames": "value1",
+                                    "BORDET1ACN": "value2",
+                                    "BORDET1TRUSTNAME": "value3",
+                                    "BORDET1ADDRESSLINE1": "value4",
+                                    "BORDET1SUBURB": "value5",
+                                    "BORDET1STATE": "value6",
+                                    "BORDET1postcode": "value7",
+                                    "LOANNumber": "value8",
+                                    "ADVANCEAMOUNT": "value9",
+                                    "standardinterestrate": "value10",
+                                    "facilityterm": "value11",
+                                    "PIRepayments": "value12",
+                                    "RepaymentAmount": "value13",
+                                    "number_of_repayments": "value14",
+                                    "charges": [
+                                        {
+                                        "charge_name": "value15",
+                                        "charge_amount": "value16"
+                                        },
+                                        {
+                                        "charge_name": "value17",
+                                        "charge_amount": "value18"
+                                        },
+                                        {
+                                        "charge_name": "value19",
+                                        "charge_amount": "value20"
+                                        }
+                                    ],
+                                    "mortgage_registration_fee": "value21",
+                                    "security_duty": None,
+                                    "LMI_Fee": None,
+                                    "annual_facility_fee": None,
+                                    "monthly_facility_fee": None,
+                                    "LoanPurposeDetail": "value26",
+                                    "DefaultInterestRate": "value27",
+                                    "LOANSPECIALCONDITIONS": "value28",
+                                    "PROPDET1MORTGAGORS": "value29",
+                                    "PROPDETALLSECADD": "value30",
+                                    "PROPDET1TITREF": "value31",
+                                    "GUARANTOR1FULLNAME": "value32",
+                                    "GUARANTOR1ACN": "value33",
+                                    "Guarantor1FullName": "value34",
+                                    "GUARANTOR1ADDRESSLINE1": "value35",
+                                    "GUARANTOR1SUBURB": "value36",
+                                    "GUARANTOR1STATE": "value37",
+                                    "GUARANTOR1POSTCODE": "value38",
+                                    "directors": [
+                                        {
+                                        "guarantor_name": "value39",
+                                        "guarantor_address": "value40",
+                                        "guarantor_suburb": "value41",
+                                        "guarantor_state": "value42",
+                                        "guarantor_postcode": "value43"
+                                        },
+                                        {
+                                        "guarantor_name": "value44",
+                                        "guarantor_address": "value45",
+                                        "guarantor_suburb": "value46",
+                                        "guarantor_state": "value47",
+                                        "guarantor_postcode": "value48"
+                                        },
+                                        {
+                                        "guarantor_name": "value49",
+                                        "guarantor_address": "value50",
+                                        "guarantor_suburb": "value51",
+                                        "guarantor_state": "value52",
+                                        "guarantor_postcode": "value53"
+                                        }
+                                    ],
+                                    "BORDET1FULLNAMESAL": "value54",
+                                    "BORDET1TRUSTDATE": "value55",
+                                    "GUARANTOR1TRUSTNAME": "value56",
+                                    "GUARANTOR1TRUSTDATE": "value57",
+                                    "guarantor_2_name": "value58",
+                                    "guarantor_3_name": None
+                                    },
     }
 }
 
@@ -879,7 +1571,30 @@ docmosisDirectories = {
     'Mortgage Side Agreement': 'SMSF/Purchase/BC/Mortgage Side Agreement.docx',
     '0. Borrowers Checklist SMSF Refi (no ILA)': 'SMSF/Refi/BC/0. Borrowers Checklist SMSF Refi (no ILA).docx',
     '0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage)': 'SMSF/Refi/BC/WetSign/0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage).docx',
-    'Disbursement Direction Authority Refi': 'SMSF/Refi/BC/Disbursement Direction Authority Refi.docx'
+    'Disbursement Direction Authority Refi': 'SMSF/Refi/BC/Disbursement Direction Authority Refi.docx',
+    '1. Credit Guide': 'SMSF/Purchase/Source/1. Credit Guide.docx',
+    '2. Loan General Terms': 'SMSF/Purchase/Source/2. Loan General Terms.docx',
+    '3. Mortgage Common Provisions': "SMSF/Purchase/Source/3. Mortgage Common Provisions.docx",
+    'Borrowers Checklist SMSF Purchase': 'SMSF/Purchase/Source/Borrowers Checklist SMSF Purchase.docx',
+    'Direct Debit Request': 'SMSF/Purchase/Source/Direct Debit Request.docx',
+    'Disbursement Direction Authority Source': 'SMSF/Purchase/Source/Disbursement Direction Authority Source.docx',
+    'Guarantee SMSF Holding Trustee': 'SMSF/Purchase/Source/Guarantee SMSF Holding Trustee.docx',
+    'Legal Advice Declaration NSW Guarantor': 'SMSF/Purchase/Source/Legal Advice Declaration NSW Guarantor.docx',
+    'Loan Agreement SMSF PI': 'SMSF/Purchase/Source/Loan Agreement SMSF PI.docx',
+    'National Mortgage Form ACT Source': 'SMSF/Purchase/Source/National Mortgage Form ACT Source.docx',
+    'National Mortgage Form NSW Source': 'SMSF/Purchase/Source/National Mortgage Form NSW Source.docx',
+    'National Mortgage Form QLD Source': 'SMSF/Purchase/Source/National Mortgage Form QLD Source.docx',
+    'National Mortgage Form SA Source': 'SMSF/Purchase/Source/National Mortgage Form SA Source.docx',
+    'National Mortgage Form VIC Source': 'SMSF/Purchase/Source/National Mortgage Form VIC Source.docx',
+    'SMSF IO Loan Agreement': 'SMSF/Purchase/Source/SMSF IO Loan Agreement.docx',
+    'SMSF Member Guarantee': 'SMSF/Purchase/Source/SMSF Member Guarantee.docx',
+    'Solicitors Certificate Guarantor': 'SMSF/Purchase/Source/Solicitors Certificate Guarantor.docx',
+    'Borrowers Checklist SMSF Wetsign': 'SMSF/Purchase/Source/WetSign/Borrowers Checklist SMSF Wetsign.docx',
+    'Borrowers Checklist SMSF NSW': 'SMSF/Purchase/Source/NSW/Borrowers Checklist SMSF NSW.docx',
+    'Privacy Policy Collection Notice': 'SMSF/Purchase/Source/Privacy Policy Collection Notice.docx',
+    'Purchase Acknowledgement Legal Financial Advice': 'SMSF/Purchase/Source/Purchase Acknowledgement Legal Financial Advice.docx',
+    '0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage)': "SMSF/Refi/Source/WetSign/0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage).docx",
+    '0. Borrowers Checklist SMSF Refi (no ILA)': 'SMSF/Refi/Source/0. Borrowers Checklist SMSF Refi (no ILA).docx'
 }
 
 
@@ -966,12 +1681,85 @@ fileDirectory = {
             'National Mortgage Form VIC'
         ]
     },
-    'SMSF/Purchase/Source/': [
-
-    ],
-    'SMSF/Refi/Source/': [
-
-    ]
+    'SMSF/Purchase/Source/': {
+        'Borrowers-Checklist': {
+            'Wetsign': 'Borrowers Checklist SMSF Wetsign',
+            'NSW': 'Borrowers Checklist SMSF NSW',
+            'Non-Wetsign-NSW': 'Borrowers Checklist SMSF Purchase',
+        },
+        'Standard': [
+            '1. Credit Guide',
+            '2. Loan General Terms',
+            '3. Mortgage Common Provisions',
+            'Direct Debit Request',
+            'Disbursement Direction Authority Source',
+            'Guarantee SMSF Holding Trustee',
+            'Privacy Policy Collection Notice',
+            'Purchase Acknowledgement Legal Financial Advice',
+            'SMSF Member Guarantee',
+            'Solicitors Certificate Guarantor',
+            
+        ],
+        'Loan-Agreement': {
+            'IO': 'Loan Agreement SMSF IO',
+            'PI': 'Loan Agreement SMSF PI'
+        },
+        'NSW-Specific': [
+            'National Mortgage Form NSW Source',
+            'Legal Advice Declaration NSW Guarantor',
+        ],
+        'QLD-Specific': [
+            'National Mortgage Form QLD Source'
+        ],
+        'SA-Specific': [
+            'National Mortgage Form SA Source'
+        ],
+        'VIC-Specific': [
+            'National Mortgage Form VIC Source'
+        ],
+        'ACT-Specific': [
+            'National Mortgage Form ACT Source'
+        ]
+    },
+    'SMSF/Refi/Source/': {
+        'Borrowers-Checklist': {
+            'Wetsign': '0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage)',
+            'Non-Wetsign-NSW': '0. Borrowers Checklist SMSF Refi (no ILA)',
+        },
+        'Standard': [
+            '1. Credit Guide',
+            '2. Loan General Terms',
+            '3. Mortgage Common Provisions',
+            'Direct Debit Request',
+            'Disbursement Direction Authority Source',
+            'Guarantee SMSF Holding Trustee',
+            'Privacy Policy Collection Notice',
+            'Purchase Acknowledgement Legal Financial Advice',
+            'SMSF Member Guarantee',
+            'Solicitors Certificate Guarantor',
+            
+        ],
+        'Loan-Agreement': {
+            'IO': 'Loan Agreement SMSF IO',
+            'PI': 'Loan Agreement SMSF PI'
+        },
+        'NSW-Specific': [
+            'National Mortgage Form NSW Source',
+            'Legal Advice Declaration NSW Guarantor',
+        ],
+        'QLD-Specific': [
+            'National Mortgage Form QLD Source'
+        ],
+        'SA-Specific': [
+            'National Mortgage Form SA Source'
+        ],
+        'VIC-Specific': [
+            'National Mortgage Form VIC Source'
+        ],
+        'ACT-Specific': [
+            'National Mortgage Form ACT Source'
+        ]
+    }
 }
 
 @app.post('/documents/populate')
@@ -983,6 +1771,9 @@ async def populate(
     loan_type: str = Query(...),
     matter_info: dict = Body(...),  # MatterInfo is the Pydantic model
 ):
+
+    print(str(matter_info))
+    # print("test")
     baseURL = matter_type + '/' + transaction_type + '/' + lender + '/'
     baseFiles = fileDirectory[baseURL]
     matterFiles = []
@@ -1028,14 +1819,12 @@ async def populate(
             jsonTemplates[key] = newDict
 
     #Format Loan Agreements
-    print(matterFiles)
     for key in templateStructures[loanAgreementDir]:
           if key in matterFiles:
             newDict = templateStructures[loanAgreementDir][key].copy()
             for key2 in templateStructures[loanAgreementDir][key]:
-
+                
                 data = matter_info['matter_info'].get(key2, '')
-                print('loan agreement ' + key2)
                 if (data is not None):
                     newDict[key2] = data
             jsonTemplates[key] = newDict
@@ -1054,11 +1843,8 @@ async def populate(
     for key in jsonTemplates:
         data = jsonTemplates[key]
         path = docmosisDirectories[key]
-        print(path)
-        print(data)
 
         pdf_bytes = populateFile(path, data, f"{key}.pdf")
-        print(type(pdf_bytes))
         files.append((f"{key}.pdf", pdf_bytes))
 
         
