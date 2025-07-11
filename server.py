@@ -987,7 +987,18 @@ templateStructures = {
                                             "Bordetallnames": "value1",
                                             "BORDET1ACN": "value2",
                                             "bordet1trustname": "value3",
-                                            "Guarantor2FullName": "value4"
+                                            "Guarantor2FullName": "value4",
+                                            "directors": [
+                                                {
+                                                "GUARANTORNAME": "value5"
+                                                },
+                                                {
+                                                "GUARANTORNAME": "value6"
+                                                },
+                                                {
+                                                "GUARANTORNAME": "value7"
+                                                }
+                                            ]
                                             },
         'Purchase Acknowledgement Legal Financial Advice': {
                                                             "Bordetallnames": "value1",
@@ -1332,7 +1343,18 @@ templateStructures = {
                                             "Bordetallnames": "value1",
                                             "BORDET1ACN": "value2",
                                             "bordet1trustname": "value3",
-                                            "Guarantor2FullName": "value4"
+                                            "Guarantor2FullName": "value4",
+                                            "directors": [
+                                                {
+                                                "GUARANTORNAME": "value5"
+                                                },
+                                                {
+                                                "GUARANTORNAME": "value6"
+                                                },
+                                                {
+                                                "GUARANTORNAME": "value7"
+                                                }
+                                            ]
                                             },
         'Purchase Acknowledgement Legal Financial Advice': {
                                                             "Bordetallnames": "value1",
