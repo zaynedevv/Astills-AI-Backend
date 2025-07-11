@@ -941,10 +941,9 @@ templateStructures = {
         'National Mortgage Form ACT Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
-                                            "PROPDET1LOTDESC": "value3",
-                                            "GUARANTOR1FULLNAME": "value4",
-                                            "GUARANTOR1ACN": "value5",
-                                            "GUARANTOR2FULLNAME": "value6"
+                                            "GUARANTOR1FULLNAME": "value3",
+                                            "GUARANTOR1ACN": "value4",
+                                            "GUARANTOR2FULLNAME": "value5"
                                             },
         'National Mortgage Form NSW Source': {
             "MATTERNUMBER": "value1",
@@ -1291,30 +1290,28 @@ templateStructures = {
                                             "GUARANTOR1ACN": "value16",
                                             "Guarantor2FullName": "value17"
                                         },
-        'National Mortgage Form ACT Source': {
+            'National Mortgage Form ACT Source':{
+                                                "MATTERNUMBER": "value1",
+                                                "PROPDET1TITREF": "value2",
+                                                "GUARANTOR1FULLNAME": "value3",
+                                                "GUARANTOR1ACN": "value4",
+                                                "GUARANTOR2FULLNAME": "value5"
+                                                },
+        'National Mortgage Form NSW Source': {
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "GUARANTOR1FULLNAME": "value3",
+                                            "GUARANTOR1ACN": "value4",
+                                            "GUARANTOR2FULLNAME": "value5"
+                                            },
+        'National Mortgage Form QLD Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "PROPDET1LOTDESC": "value3",
                                             "GUARANTOR1FULLNAME": "value4",
                                             "GUARANTOR1ACN": "value5",
                                             "GUARANTOR2FULLNAME": "value6"
-                                            },
-        'National Mortgage Form NSW Source': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "GUARANTOR1FULLNAME": "value3",
-            "Guarantor1ACN": "value4",
-            "Guarantor2FullName": "value5"
-            },
-        'National Mortgage Form QLD Source': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "PROPDET1LOTDESC": "value3",
-            "GUARANTOR1FULLNAME": "value4",
-            "Guarantor1ACN": "value5",
-            "GUAraNTOR1FULLNAME": "value6",
-            "GUARANTOR2FULLNAME": "value7"
-            },
+                                            },   
         'National Mortgage Form SA Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
