@@ -227,12 +227,12 @@ templateStructures = {
         },
         
         'National Mortgage Form NSW': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "Guarantor1Fullname": "value3",
-            "Guarantor1ACN": "value4",
-            "Guarantor2Fullname": "value5"
-        },
+                                    "MATTERNUMBER": "value1",
+                                    "PROPDET1TITREF": "value2",
+                                    "GUARANTOR1FULLNAME": "value3",
+                                    "GUARANTOR1ACN": "value4",
+                                    "GUARANTOR2FULLNAME": "value5"
+                                    },
         'National Mortgage Form QLD': {
             "MATTERNUMBER": "value1",
             "PROPDET1TITREF": "value2",
@@ -253,12 +253,12 @@ templateStructures = {
             "Guarantor2Fullname": "value9"
         },
         'National Mortgage Form VIC': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "Guarantor1Fullname": "value3",
-            "Guarantor1ACN": "value4",
-            "Guarantor2Fullname": "value5"
-        },
+                                    "MATTERNUMBER": "value1",
+                                    "PROPDET1TITREF": "value2",
+                                    "GUARANTOR1FULLNAME": "value3",
+                                    "GUARANTOR1ACN": "value4",
+                                    "GUARANTOR2FULLNAME": "value5"
+                                    },
         'Privacy Consent Form BC July 26 2024': {
             "Bordetallnames": "value1",
             "BORDET1ACN": "value2",
@@ -627,20 +627,20 @@ templateStructures = {
         },
         
         'National Mortgage Form NSW': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "Guarantor1Fullname": "value3",
-            "Guarantor1ACN": "value4",
-            "Guarantor2Fullname": "value5"
-        },
+                                    "MATTERNUMBER": "value1",
+                                    "PROPDET1TITREF": "value2",
+                                    "GUARANTOR1FULLNAME": "value3",
+                                    "GUARANTOR1ACN": "value4",
+                                    "GUARANTOR2FULLNAME": "value5"
+                                    },
         'National Mortgage Form QLD': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "PROPDET1LOTDESC": "value3",
-            "Guarantor1Fullname": "value4",
-            "Guarantor1ACN": "value5",
-            "Guarantor2Fullname": "value6"
-        },
+                                    "MATTERNUMBER": "value1",
+                                    "PROPDET1TITREF": "value2",
+                                    "PROPDET1LOTDESC": "value3",
+                                    "GUARANTOR1FULLNAME": "value4",
+                                    "GUARANTOR1ACN": "value5",
+                                    "GUARANTOR2FULLNAME": "value6"
+                                    },
         'National Mortgage Form SA': {
             "MATTERNUMBER": "value1",
             "PROPDET1TITREF": "value2",
@@ -653,12 +653,12 @@ templateStructures = {
             "Guarantor2Fullname": "value9"
         },
         'National Mortgage Form VIC': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "Guarantor1Fullname": "value3",
-            "Guarantor1ACN": "value4",
-            "Guarantor2Fullname": "value5"
-        },
+                                    "MATTERNUMBER": "value1",
+                                    "PROPDET1TITREF": "value2",
+                                    "GUARANTOR1FULLNAME": "value3",
+                                    "GUARANTOR1ACN": "value4",
+                                    "GUARANTOR2FULLNAME": "value5"
+                                    },
         'Privacy Consent Form BC July 26 2024': {
             "Bordetallnames": "value1",
             "BORDET1ACN": "value2",
@@ -939,14 +939,13 @@ templateStructures = {
                                             "Guarantor2FullName": "value17"
                                         },
         'National Mortgage Form ACT Source': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "PROPDET1LOTDESC": "value3",
-            "GUARANTOR1FULLNAME": "value4",
-            "Guarantor1ACN": "value5",
-            "GUARANTOR2FULLNAME": "value6",
-            "GUAraNTOR1FULLNAME": "value7"
-            },
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "PROPDET1LOTDESC": "value3",
+                                            "GUARANTOR1FULLNAME": "value4",
+                                            "GUARANTOR1ACN": "value5",
+                                            "GUARANTOR2FULLNAME": "value6"
+                                            },
         'National Mortgage Form NSW Source': {
             "MATTERNUMBER": "value1",
             "PROPDET1TITREF": "value2",
@@ -955,25 +954,23 @@ templateStructures = {
             "Guarantor2FullName": "value5"
             },
         'National Mortgage Form QLD Source': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "PROPDET1LOTDESC": "value3",
-            "GUARANTOR1FULLNAME": "value4",
-            "Guarantor1ACN": "value5",
-            "GUAraNTOR1FULLNAME": "value6",
-            "GUARANTOR2FULLNAME": "value7"
-            },
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "PROPDET1LOTDESC": "value3",
+                                            "GUARANTOR1FULLNAME": "value4",
+                                            "GUARANTOR1ACN": "value5",
+                                            "GUARANTOR2FULLNAME": "value6"
+                                            },
         'National Mortgage Form SA Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
-                                            "Guarantor1ACN": "value4",
+                                            "GUARANTOR1ACN": "value4",
                                             "BORDET1ADDRESSLINE1": "value5",
                                             "BORDET1SUBURB": "value6",
                                             "BORDET1STATE": "value7",
                                             "BORDET1POSTCODE": "value8",
-                                            "GUAraNTOR1FULLNAME": "value9",
-                                            "Guarantor2FullName": "value10"
+                                            "GUARANTOR2FULLNAME": "value9"
                                             },
         'National Mortgage Form VIC Source': {
                                             "MATTERNUMBER": "value1",
@@ -1295,14 +1292,13 @@ templateStructures = {
                                             "Guarantor2FullName": "value17"
                                         },
         'National Mortgage Form ACT Source': {
-            "MATTERNUMBER": "value1",
-            "PROPDET1TITREF": "value2",
-            "PROPDET1LOTDESC": "value3",
-            "GUARANTOR1FULLNAME": "value4",
-            "Guarantor1ACN": "value5",
-            "GUARANTOR2FULLNAME": "value6",
-            "GUAraNTOR1FULLNAME": "value7"
-            },
+                                            "MATTERNUMBER": "value1",
+                                            "PROPDET1TITREF": "value2",
+                                            "PROPDET1LOTDESC": "value3",
+                                            "GUARANTOR1FULLNAME": "value4",
+                                            "GUARANTOR1ACN": "value5",
+                                            "GUARANTOR2FULLNAME": "value6"
+                                            },
         'National Mortgage Form NSW Source': {
             "MATTERNUMBER": "value1",
             "PROPDET1TITREF": "value2",
@@ -1323,13 +1319,12 @@ templateStructures = {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
-                                            "Guarantor1ACN": "value4",
+                                            "GUARANTOR1ACN": "value4",
                                             "BORDET1ADDRESSLINE1": "value5",
                                             "BORDET1SUBURB": "value6",
                                             "BORDET1STATE": "value7",
                                             "BORDET1POSTCODE": "value8",
-                                            "GUAraNTOR1FULLNAME": "value9",
-                                            "Guarantor2FullName": "value10"
+                                            "GUARANTOR2FULLNAME": "value9"
                                             },
         'National Mortgage Form VIC Source': {
                                             "MATTERNUMBER": "value1",
