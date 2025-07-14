@@ -1593,8 +1593,8 @@ templateStructures = {
 }
 
 docmosisDirectories = {
-    '13. Company Guarantee Warranty': 'SMSF/Purchase/BC/13. Company Guarantee Warranty.docx',
-    '14. Company Guarantee Warranty (ShareHolders)': 'SMSF/Purchase/BC/14. Company Guarantee Warranty (ShareHolders).docx',
+    '12. Company Guarantee Warranty': 'SMSF/Purchase/BC/13. Company Guarantee Warranty.docx',
+    '13. Company Guarantee Warranty (ShareHolders)': 'SMSF/Purchase/BC/14. Company Guarantee Warranty (ShareHolders).docx',
     '17. Direct Debit Authority': 'SMSF/Purchase/BC/17. Direct Debit Authority.docx',
     '16. Disbursement Direction Authority Purchase': 'SMSF/Purchase/BC/16. Disbursement Direction Authority Purchase.docx',
     '11. Guarantee & Indemnity June 23': 'SMSF/Purchase/BC/11. Guarantee & Indemnity June 23.docx',
