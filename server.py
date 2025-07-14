@@ -439,7 +439,8 @@ templateStructures = {
                         "BORDET1FULLNAME": "value42",
                         "BORDET1TRUSTNAME": "value43",
                         "guarantor_2_name": "value44",
-                        "guarantor_3_name": None
+                        "guarantor_3_name": None,
+                        "LoanPurpose": "value40"
                         },
     'Loan Agreement Offer PI': {
                             "BORDET1FULLNAMESAL": "value1",
@@ -482,7 +483,8 @@ templateStructures = {
                             "BORDET1FULLNAME": "value38",
                             "BORDET1TRUSTNAME": "value39",
                             "guarantor_2_name": "value40",
-                            "guarantor_3_name": None
+                            "guarantor_3_name": None,
+                            "LoanPurpose": "value40"
                             },
     },
     'BC/Refi/Standard': {
@@ -839,7 +841,8 @@ templateStructures = {
                                     "BORDET1FULLNAME": "value42",
                                     "BORDET1TRUSTNAME": "value43",
                                     "guarantor_2_name": None,
-                                    "guarantor_3_name": None
+                                    "guarantor_3_name": None,
+                                    "LoanPurpose": "value40"
                                     },
     'Loan Agreement Offer PI': {
                                 "BORDET1FULLNAMESAL": "value1",
@@ -882,7 +885,8 @@ templateStructures = {
                                 "BORDET1FULLNAME": "value38",
                                 "BORDET1TRUSTNAME": "value39",
                                 "guarantor_2_name": None,
-                                "guarantor_3_name": None
+                                "guarantor_3_name": None,
+                                "LoanPurpose": "value40"
                                 }
     },
     'Source/Purchase/Standard': {
