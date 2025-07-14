@@ -890,7 +890,7 @@ templateStructures = {
                                 }
     },
     'Source/Purchase/Standard': {
-        'Direct Debit Request': {
+        '11. Direct Debit Request': {
                                 "BORDET1FULLNAMESAL": "value1",
                                 "BORDET1ACN": "value2",
                                 "bordet1trustname": "value3",
@@ -902,7 +902,7 @@ templateStructures = {
                                 "LOANNumber": "value9",
                                 "Guarantor2FULLNAME": "value10"
                                 },
-        'Disbursement Direction Authority Source': {
+        '10. Disbursement Direction Authority Source': {
                                                 "Propdetallsecadd": "value1",
                                                 "Bordetallnames": "value2",
                                                 "BORDET1ACN": "value3",
@@ -924,7 +924,7 @@ templateStructures = {
                                                 "advanceamount": "value26",
                                                 "BORDET1FULLNAME": "value27"
                                                 },
-        'Guarantee SMSF Holding Trustee': {
+        '7. Guarantee SMSF Holding Trustee': {
                                             "Guarantor1FullName": "value1",
                                             "GUARANTOR1TRUSTNAME": "value2",
                                             "Guarantor1ACN": "value3",
@@ -943,21 +943,21 @@ templateStructures = {
                                             "GUARANTOR1ACN": "value16",
                                             "Guarantor2FullName": "value17"
                                         },
-        'National Mortgage Form ACT Source': {
+        '5. National Mortgage Form ACT Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
                                             "GUARANTOR1ACN": "value4",
                                             "GUARANTOR2FULLNAME": "value5"
                                             },
-        'National Mortgage Form NSW Source': {
+        '5. National Mortgage Form NSW Source': {
             "MATTERNUMBER": "value1",
             "PROPDET1TITREF": "value2",
             "GUARANTOR1FULLNAME": "value3",
             "Guarantor1ACN": "value4",
             "Guarantor2FullName": "value5"
             },
-        'National Mortgage Form QLD Source': {
+        '5. National Mortgage Form QLD Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "PROPDET1LOTDESC": "value3",
@@ -965,7 +965,7 @@ templateStructures = {
                                             "GUARANTOR1ACN": "value5",
                                             "GUARANTOR2FULLNAME": "value6"
                                             },
-        'National Mortgage Form SA Source': {
+        '5. National Mortgage Form SA Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
@@ -976,7 +976,7 @@ templateStructures = {
                                             "BORDET1POSTCODE": "value8",
                                             "GUARANTOR2FULLNAME": "value9"
                                             },
-        'National Mortgage Form VIC Source': {
+        '5. National Mortgage Form VIC Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
@@ -984,7 +984,7 @@ templateStructures = {
                                             "GUARANTOR2FULLNAME": "value5",
                                             "GUAraNTOR1FULLNAME": "value6"
                                             },
-        'Privacy Policy Collection Notice': {
+        '6. Privacy Policy Collection Notice': {
                                             "Bordetallnames": "value1",
                                             "BORDET1ACN": "value2",
                                             "bordet1trustname": "value3",
@@ -1001,7 +1001,7 @@ templateStructures = {
                                                 }
                                             ]
                                             },
-        'Purchase Acknowledgement Legal Financial Advice': {
+        '9. Purchase Acknowledgement Legal Financial Advice': {
                                                             "Bordetallnames": "value1",
                                                             "BORDET1ACN": "value2",
                                                             "LOANNNUMBER": "value3",
@@ -1017,7 +1017,7 @@ templateStructures = {
                                                                 }
                                                             ]
                                                             },
-        'SMSF Member Guarantee':{
+        '8. SMSF Member Guarantee':{
                                 "directors": [
                                     {
                                     "GUARANTORNAME": "value1",
@@ -1068,7 +1068,7 @@ templateStructures = {
         '1. Credit Guide': {},
         '2. Loan General Terms': {},
         '3. Mortgage Common Provisions': {},
-        'Legal Advice Declaration NSW Guarantor': {
+        '12. Legal Advice Declaration NSW Guarantor': {
             "plinitials": "value1",
             "matternumber": "value2",
             "Guarantor2FULLNAME": "value3",
@@ -1085,7 +1085,7 @@ templateStructures = {
         
     },
     'Source/Purchase/LoanAgreement': {
-        'Loan Agreement SMSF IO': {
+        '4. Loan Agreement SMSF IO': {
                                 "Bordetallnames": "value1",
                                 "BORDET1ACN": "value2",
                                 "BORDET1TRUSTNAME": "value3",
@@ -1163,7 +1163,7 @@ templateStructures = {
                                 "guarantor_2_name": "value59",
                                 "guarantor_3_name": None
                                 },
-        'Loan Agreement SMSF PI': {
+        '4. Loan Agreement SMSF PI': {
                                     "Bordetallnames": "value1",
                                     "BORDET1ACN": "value2",
                                     "BORDET1TRUSTNAME": "value3",
@@ -1242,7 +1242,7 @@ templateStructures = {
                                     },
     },
     "Source/Refi/Standard": {
-        'Direct Debit Request': {
+        '11. Direct Debit Request': {
                                 "BORDET1FULLNAMESAL": "value1",
                                 "BORDET1ACN": "value2",
                                 "bordet1trustname": "value3",
@@ -1254,7 +1254,7 @@ templateStructures = {
                                 "LOANNumber": "value9",
                                 "Guarantor2FULLNAME": "value10"
                                 },
-        'Disbursement Direction Authority Source': {
+        '10. Disbursement Direction Authority Source': {
                                                 "Propdetallsecadd": "value1",
                                                 "Bordetallnames": "value2",
                                                 "BORDET1ACN": "value3",
@@ -1276,7 +1276,7 @@ templateStructures = {
                                                 "advanceamount": "value26",
                                                 "BORDET1FULLNAME": "value27"
                                                 },
-        'Guarantee SMSF Holding Trustee': {
+        '7. Guarantee SMSF Holding Trustee': {
                                             "Guarantor1Fullname": "value1",
                                             "GUARANTOR1TRUSTNAME": "value2",
                                             "Guarantor1ACN": "value3",
@@ -1295,21 +1295,21 @@ templateStructures = {
                                             "GUARANTOR1ACN": "value16",
                                             "Guarantor2FullName": "value17"
                                         },
-            'National Mortgage Form ACT Source':{
+            '5. National Mortgage Form ACT Source':{
                                                 "MATTERNUMBER": "value1",
                                                 "PROPDET1TITREF": "value2",
                                                 "GUARANTOR1FULLNAME": "value3",
                                                 "GUARANTOR1ACN": "value4",
                                                 "GUARANTOR2FULLNAME": "value5"
                                                 },
-        'National Mortgage Form NSW Source': {
+        '5. National Mortgage Form NSW Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
                                             "GUARANTOR1ACN": "value4",
                                             "GUARANTOR2FULLNAME": "value5"
                                             },
-        'National Mortgage Form QLD Source': {
+        '5. National Mortgage Form QLD Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "PROPDET1LOTDESC": "value3",
@@ -1317,7 +1317,7 @@ templateStructures = {
                                             "GUARANTOR1ACN": "value5",
                                             "GUARANTOR2FULLNAME": "value6"
                                             },   
-        'National Mortgage Form SA Source': {
+        '5. National Mortgage Form SA Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
@@ -1328,7 +1328,7 @@ templateStructures = {
                                             "BORDET1POSTCODE": "value8",
                                             "GUARANTOR2FULLNAME": "value9"
                                             },
-        'National Mortgage Form VIC Source': {
+        '5. National Mortgage Form VIC Source': {
                                             "MATTERNUMBER": "value1",
                                             "PROPDET1TITREF": "value2",
                                             "GUARANTOR1FULLNAME": "value3",
@@ -1336,7 +1336,7 @@ templateStructures = {
                                             "GUARANTOR2FULLNAME": "value5",
                                             "GUAraNTOR1FULLNAME": "value6"
                                             },
-        'Privacy Policy Collection Notice': {
+        '6. Privacy Policy Collection Notice': {
                                             "Bordetallnames": "value1",
                                             "BORDET1ACN": "value2",
                                             "bordet1trustname": "value3",
@@ -1353,7 +1353,7 @@ templateStructures = {
                                                 }
                                             ]
                                             },
-        'Purchase Acknowledgement Legal Financial Advice': {
+        '9. Purchase Acknowledgement Legal Financial Advice': {
                                                             "Bordetallnames": "value1",
                                                             "BORDET1ACN": "value2",
                                                             "LOANNNUMBER": "value3",
@@ -1369,7 +1369,7 @@ templateStructures = {
                                                                 }
                                                             ]
                                                             },
-        'SMSF Member Guarantee': {
+        '8. SMSF Member Guarantee': {
                                 "directors": [
                                     {
                                     "GuarantorFullName": "value1",
@@ -1418,7 +1418,7 @@ templateStructures = {
         '1. Credit Guide': {},
         '2. Loan General Terms': {},
         '3. Mortgage Common Provisions': {},
-        'Legal Advice Declaration NSW Guarantor': {
+        '12. Legal Advice Declaration NSW Guarantor': {
             "plinitials": "value1",
             "matternumber": "value2",
             "Guarantor2FULLNAME": "value3",
@@ -1434,7 +1434,7 @@ templateStructures = {
 
     },
     "Source/Refi/LoanAgreement": {
-                'Loan Agreement SMSF IO': {
+                '4. Loan Agreement SMSF IO': {
                                         "Bordetallnames": "value1",
                                         "BORDET1ACN": "value2",
                                         "BORDET1TRUSTNAME": "value3",
@@ -1512,7 +1512,7 @@ templateStructures = {
                                         "guarantor_2_name": "value59",
                                         "guarantor_3_name": None
                                         },
-        'Loan Agreement SMSF PI': {
+        '4. Loan Agreement SMSF PI': {
                                     "Bordetallnames": "value1",
                                     "BORDET1ACN": "value2",
                                     "BORDET1TRUSTNAME": "value3",
@@ -1624,24 +1624,24 @@ docmosisDirectories = {
     '1. Credit Guide': 'SMSF/Purchase/Source/1. Credit Guide.docx',
     '2. Loan General Terms': 'SMSF/Purchase/Source/2. Loan General Terms.docx',
     '3. Mortgage Common Provisions': "SMSF/Purchase/Source/3. Mortgage Common Provisions.docx",
-    'Borrowers Checklist SMSF Purchase': 'SMSF/Purchase/Source/Borrowers Checklist SMSF Purchase.docx',
-    'Direct Debit Request': 'SMSF/Purchase/Source/Direct Debit Request.docx',
-    'Disbursement Direction Authority Source': 'SMSF/Purchase/Source/Disbursement Direction Authority Source.docx',
-    'Guarantee SMSF Holding Trustee': 'SMSF/Purchase/Source/Guarantee SMSF Holding Trustee.docx',
-    'Legal Advice Declaration NSW Guarantor': 'SMSF/Purchase/Source/Legal Advice Declaration NSW Guarantor.docx',
-    'Loan Agreement SMSF PI': 'SMSF/Purchase/Source/Loan Agreement SMSF PI.docx',
-    'National Mortgage Form ACT Source': 'SMSF/Purchase/Source/National Mortgage Form ACT Source.docx',
-    'National Mortgage Form NSW Source': 'SMSF/Purchase/Source/National Mortgage Form NSW Source.docx',
-    'National Mortgage Form QLD Source': 'SMSF/Purchase/Source/National Mortgage Form QLD Source.docx',
-    'National Mortgage Form SA Source': 'SMSF/Purchase/Source/National Mortgage Form SA Source.docx',
-    'National Mortgage Form VIC Source': 'SMSF/Purchase/Source/National Mortgage Form VIC Source.docx',
-    'Loan Agreement SMSF IO': 'SMSF/Purchase/Source/Loan Agreement SMSF IO.docx',
-    'SMSF Member Guarantee': 'SMSF/Purchase/Source/SMSF Member Guarantee.docx',
-    'Solicitors Certificate Guarantor': 'SMSF/Purchase/Source/Solicitors Certificate Guarantor.docx',
-    'Borrowers Checklist SMSF Wetsign': 'SMSF/Purchase/Source/WetSign/Borrowers Checklist SMSF Wetsign.docx',
-    'Borrowers Checklist SMSF NSW': 'SMSF/Purchase/Source/NSW/Borrowers Checklist SMSF NSW.docx',
-    'Privacy Policy Collection Notice': 'SMSF/Purchase/Source/Privacy Policy Collection Notice.docx',
-    'Purchase Acknowledgement Legal Financial Advice': 'SMSF/Purchase/Source/Purchase Acknowledgement Legal Financial Advice.docx',
+    'Borrowers Checklist SMSF Purchase': 'SMSF/Purchase/Source/0. Borrowers Checklist SMSF Purchase.docx',
+    'Direct Debit Request': 'SMSF/Purchase/Source/11. Direct Debit Request.docx',
+    'Disbursement Direction Authority Source': 'SMSF/Purchase/Source/10. Disbursement Direction Authority Source.docx',
+    'Guarantee SMSF Holding Trustee': 'SMSF/Purchase/Source/7. Guarantee SMSF Holding Trustee.docx',
+    'Legal Advice Declaration NSW Guarantor': 'SMSF/Purchase/Source/12. Legal Advice Declaration NSW Guarantor.docx',
+    'Loan Agreement SMSF PI': 'SMSF/Purchase/Source/4. Loan Agreement SMSF PI.docx',
+    'National Mortgage Form ACT Source': 'SMSF/Purchase/Source/5. National Mortgage Form ACT Source.docx',
+    'National Mortgage Form NSW Source': 'SMSF/Purchase/Source/5. National Mortgage Form NSW Source.docx',
+    'National Mortgage Form QLD Source': 'SMSF/Purchase/Source/5. National Mortgage Form QLD Source.docx',
+    'National Mortgage Form SA Source': 'SMSF/Purchase/Source/5. National Mortgage Form SA Source.docx',
+    'National Mortgage Form VIC Source': 'SMSF/Purchase/Source/5. National Mortgage Form VIC Source.docx',
+    'Loan Agreement SMSF IO': 'SMSF/Purchase/Source/4. oan Agreement SMSF IO.docx',
+    'SMSF Member Guarantee': 'SMSF/Purchase/Source/8. SMSF Member Guarantee.docx',
+    'Solicitors Certificate Guarantor': 'SMSF/Purchase/Source/12. Solicitors Certificate Guarantor.docx',
+    'Borrowers Checklist SMSF Wetsign': 'SMSF/Purchase/Source/WetSign/0. Borrowers Checklist SMSF Wetsign.docx',
+    'Borrowers Checklist SMSF NSW': 'SMSF/Purchase/Source/NSW/0. Borrowers Checklist SMSF NSW.docx',
+    'Privacy Policy Collection Notice': 'SMSF/Purchase/Source/6. Privacy Policy Collection Notice.docx',
+    'Purchase Acknowledgement Legal Financial Advice': 'SMSF/Purchase/Source/9. Purchase Acknowledgement Legal Financial Advice.docx',
     '0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage)': "SMSF/Refi/Source/WetSign/0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage).docx",
     '0. Borrowers Checklist SMSF Refi (no ILA)': 'SMSF/Refi/Source/0. Borrowers Checklist SMSF Refi (no ILA).docx'
 }
@@ -1732,42 +1732,42 @@ fileDirectory = {
     },
     'SMSF/Purchase/Source/': {
         'Borrowers-Checklist': {
-            'Wetsign': 'Borrowers Checklist SMSF Wetsign',
-            'NSW': 'Borrowers Checklist SMSF NSW',
-            'Non-Wetsign-NSW': 'Borrowers Checklist SMSF Purchase',
+            'Wetsign': '0. Borrowers Checklist SMSF Wetsign',
+            'NSW': '0. Borrowers Checklist SMSF NSW',
+            'Non-Wetsign-NSW': '0. Borrowers Checklist SMSF Purchase',
         },
         'Standard': [
             '1. Credit Guide',
             '2. Loan General Terms',
             '3. Mortgage Common Provisions',
-            'Direct Debit Request',
-            'Disbursement Direction Authority Source',
-            'Guarantee SMSF Holding Trustee',
-            'Privacy Policy Collection Notice',
-            'Purchase Acknowledgement Legal Financial Advice',
-            'SMSF Member Guarantee',
-            'Solicitors Certificate Guarantor',
+            '11. Direct Debit Request',
+            '10. Disbursement Direction Authority Source',
+            '7. Guarantee SMSF Holding Trustee',
+            '6. Privacy Policy Collection Notice',
+            '9. Purchase Acknowledgement Legal Financial Advice',
+            '8. SMSF Member Guarantee',
+            '12. Solicitors Certificate Guarantor',
             
         ],
         'Loan-Agreement': {
-            'IO': 'Loan Agreement SMSF IO',
-            'PI': 'Loan Agreement SMSF PI'
+            'IO': '4. Loan Agreement SMSF IO',
+            'PI': '4. Loan Agreement SMSF PI'
         },
         'NSW-Specific': [
-            'National Mortgage Form NSW Source',
-            'Legal Advice Declaration NSW Guarantor',
+            '5. National Mortgage Form NSW Source',
+            '12. Legal Advice Declaration NSW Guarantor',
         ],
         'QLD-Specific': [
-            'National Mortgage Form QLD Source'
+            '5. National Mortgage Form QLD Source'
         ],
         'SA-Specific': [
-            'National Mortgage Form SA Source'
+            '5. National Mortgage Form SA Source'
         ],
         'VIC-Specific': [
-            'National Mortgage Form VIC Source'
+            '5. National Mortgage Form VIC Source'
         ],
         'ACT-Specific': [
-            'National Mortgage Form ACT Source'
+            '5. National Mortgage Form ACT Source'
         ]
     },
     'SMSF/Refi/Source/': {
@@ -1779,34 +1779,34 @@ fileDirectory = {
             '1. Credit Guide',
             '2. Loan General Terms',
             '3. Mortgage Common Provisions',
-            'Direct Debit Request',
-            'Disbursement Direction Authority Source',
-            'Guarantee SMSF Holding Trustee',
-            'Privacy Policy Collection Notice',
-            'Purchase Acknowledgement Legal Financial Advice',
-            'SMSF Member Guarantee',
-            'Solicitors Certificate Guarantor',
+            '11. Direct Debit Request',
+            '10. Disbursement Direction Authority Source',
+            '7. Guarantee SMSF Holding Trustee',
+            '6. Privacy Policy Collection Notice',
+            '9. Purchase Acknowledgement Legal Financial Advice',
+            '8. SMSF Member Guarantee',
+            '12. Solicitors Certificate Guarantor',
             
         ],
         'Loan-Agreement': {
-            'IO': 'Loan Agreement SMSF IO',
-            'PI': 'Loan Agreement SMSF PI'
+            'IO': '4. Loan Agreement SMSF IO',
+            'PI': '4. Loan Agreement SMSF PI'
         },
         'NSW-Specific': [
-            'National Mortgage Form NSW Source',
-            'Legal Advice Declaration NSW Guarantor',
+            '5. National Mortgage Form NSW Source',
+            '12. Legal Advice Declaration NSW Guarantor',
         ],
         'QLD-Specific': [
-            'National Mortgage Form QLD Source'
+            '5. National Mortgage Form QLD Source'
         ],
         'SA-Specific': [
-            'National Mortgage Form SA Source'
+            '5. National Mortgage Form SA Source'
         ],
         'VIC-Specific': [
-            'National Mortgage Form VIC Source'
+            '5. National Mortgage Form VIC Source'
         ],
         'ACT-Specific': [
-            'National Mortgage Form ACT Source'
+            '5. National Mortgage Form ACT Source'
         ]
     }
 }
