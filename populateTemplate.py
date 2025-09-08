@@ -9,7 +9,7 @@ def populateFile(templatePath, data, outputName):
     "templateName": templatePath,
     "data": data,
     "outputFormat": "pdf;docx",
-    "accessKey": "YzFiMmI0ZDQtMzIxYS00YTBiLWJlNjYtMDdkM2I4YjU4ODc3OjY0NjI1OTY3ODE"
+    "accessKey": "NTkxZjQ3ZjktODc4MC00MTBhLWIyZjktMzlkYmM0ZTIwZTAxOjU1MDIxMTY0Nw"
     }
 
     headers = {'content-type': 'application/json'}
@@ -19,4 +19,21 @@ def populateFile(templatePath, data, outputName):
         print(response.content)
     return response.content
 
+
+def getTemplateStucture(path):
+
+    url = "https://au1.dws4.docmosis.com/api/getSampleData"
+
+    payload = {
+        'templateName': path,
+        'accessKey': 'NTkxZjQ3ZjktODc4MC00MTBhLWIyZjktMzlkYmM0ZTIwZTAxOjU1MDIxMTY0Nw'
+    }
+    files=[
+
+    ]
+    headers = {}
+
+    response = requests.request("POST", url, headers=headers, data=payload, files=files)
+
+    return response.json()
 
