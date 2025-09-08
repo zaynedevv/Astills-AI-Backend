@@ -1,3 +1,7 @@
+# syntax=docker/dockerfile:1.4
+
+ARG BUILDKIT_INLINE_CACHE=0
+
 FROM python:3.11-slim
 
 WORKDIR /app
