@@ -22,6 +22,5 @@ primary_region = 'syd'
   cpus = 1
   memory_mb = 1024
 
-[scale]
-min_machines = 1   # ensures at least one instance always runs
-max_machines = 1
+[experimental]
+  min_machines = 1
