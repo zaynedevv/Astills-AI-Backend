@@ -14,7 +14,7 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Purchase/BC/11. Guarantee & Indemnity June 23.docx',
             'SMSF/Purchase/BC/10. Guarantee Indemnity Bare Trustee June 23.docx',
             'SMSF/Purchase/BC/12. Guarantor Legal Advice Warranty.docx',
-            'SMSF/Purchase/BC/7. Guarantor Legal Advice.docx',
+            'SMSF/Purchase/BC/7. Guarantor Legal Advice Waiver.docx',
             'SMSF/Purchase/BC/7. Privacy Consent Form BC July 26 2024.docx',
             'SMSF/Purchase/BC/14. Warranties Fund Mortgaged Property June 23.docx',
             'SMSF/Purchase/BC/1. Credit Guide.docx',
@@ -161,4 +161,5 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Refi/Source/5. National Mortgage Form ACT Source.docx'
         ]
     }
+
 }
