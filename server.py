@@ -142,7 +142,7 @@ async def populate(
                     ILAData[key] = director.get(key)
     
             file = await populate_file_async(
-                "SMSF/Purchase/BC/17. Individual Legal Advice Certificate",
+                "SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx",
                 ILAData,
                 f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}'
             )
