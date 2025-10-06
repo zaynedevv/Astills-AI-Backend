@@ -140,6 +140,7 @@ async def populate(
                     ILAData[key] = data[key]
                 else:
                     ILAData[key] = director.get(key)
+            print(ILAData)
     
             file = await populate_file_async(
                 "SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx",
