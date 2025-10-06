@@ -130,7 +130,7 @@ async def populate(
     #Individual Legal Advice Certificate Logic
     if lender == "BC" and transaction_type == "Purchase":
         ILAName = "SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx"
-        template = await get_templates_async(["SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx"])
+        template = await get_templates_async([ILAName])
         print(template);
     
         for director in matter_info["directors"]:
@@ -143,11 +143,35 @@ async def populate(
             print(ILAData)
     
             file = await populate_file_async(
-                "SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx",
+                ILAName,
                 ILAData,
                 f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}'
             )
             files.append((f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}.zip', file))
+
+
+    #Guarantor Legal Advice Warranty
+    if lender == "BC" and transaction_type == "Refi":
+        ILAName = "SMSF/Refi/BC/12. Guarantor Legal Advice Warranty.docx"
+        template = await get_templates_async([ILAName])
+        print(template);
+    
+        for director in matter_info["directors"]:
+            ILAData = {}
+            for key in template[ILAName]:
+                if data.get(key):  # safer than data[key]
+                    ILAData[key] = data[key]
+                else:
+                    ILAData[key] = director.get(key)
+            print(ILAData)
+    
+            file = await populate_file_async(
+                ILAName,
+                ILAData,
+                f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}'
+            )
+            files.append((f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}.zip', file))
+
         
     zip_buffer = io.BytesIO()
     with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
