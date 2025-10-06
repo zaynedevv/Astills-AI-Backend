@@ -53,7 +53,6 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Refi/BC/15. Disbursement Direction Authority Refi.docx',
             'SMSF/Refi/BC/11. Guarantee & Indemnity June 23.docx',
             'SMSF/Refi/BC/10. Guarantee Indemnity Bare Trustee June 23.docx',
-            'SMSF/Refi/BC/12. Guarantor Legal Advice Warranty.docx',
             'SMSF/Refi/BC/7. Guarantor Legal Advice.docx',
             'SMSF/Refi/BC/7. Privacy Consent Form BC July 26 2024.docx',
             'SMSF/Refi/BC/14. Warranties Fund Mortgaged Property June 23.docx',
@@ -162,5 +161,6 @@ DOCMOSIS_DIRECTORIES = {
     }
 
 }
+
 
 
