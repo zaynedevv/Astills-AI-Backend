@@ -127,6 +127,27 @@ async def populate(
 
     files = await generate_all_pdfs(data)
 
+    #Individual Legal Advice Certificate Logic
+    if lender == "BC" and transaction_type == "Purchase":
+        ILAName = "SMSF/Purchase/BC/17. Individual Legal Advice Certificate"
+        template = get_templates_async(["SMSF/Purchase/BC/17. Individual Legal Advice Certificate"])
+        print(template);
+    
+        for director in data["directors"]:
+            ILAData = {}
+            for key in template[ILAName]:
+                if data.get(key):  # safer than data[key]
+                    ILAData[key] = data[key]
+                else:
+                    ILAData[key] = director.get(key)
+    
+            file = populate_file_async(
+                "SMSF/Purchase/BC/17. Individual Legal Advice Certificate",
+                ILAData,
+                f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}'
+            )
+            files.append((f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}', file))
+        
     zip_buffer = io.BytesIO()
     with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
         for filename, content in files:
