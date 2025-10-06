@@ -146,7 +146,7 @@ async def populate(
                 ILAData,
                 f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}'
             )
-            files.append((f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}', file))
+            files.append((f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}.zip', file))
         
     zip_buffer = io.BytesIO()
     with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
