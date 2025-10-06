@@ -8,7 +8,7 @@ from populateTemplate import populateFile, getTemplateStucture
 from constants import DOCMOSIS_DIRECTORIES
 from fastapi.responses import StreamingResponse
 
-from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs
+from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async
 
 import io
 import zipfile
