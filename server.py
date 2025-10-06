@@ -130,7 +130,7 @@ async def populate(
     #Individual Legal Advice Certificate Logic
     if lender == "BC" and transaction_type == "Purchase":
         ILAName = "SMSF/Purchase/BC/17. Individual Legal Advice Certificate"
-        template = get_templates_async(["SMSF/Purchase/BC/17. Individual Legal Advice Certificate"])
+        template = await get_templates_async(["SMSF/Purchase/BC/17. Individual Legal Advice Certificate"])
         print(template);
     
         for director in matter_info["directors"]:
@@ -141,7 +141,7 @@ async def populate(
                 else:
                     ILAData[key] = director.get(key)
     
-            file = populate_file_async(
+            file = await populate_file_async(
                 "SMSF/Purchase/BC/17. Individual Legal Advice Certificate",
                 ILAData,
                 f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}'
