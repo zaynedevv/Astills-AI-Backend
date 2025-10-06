@@ -168,9 +168,9 @@ async def populate(
             file = await populate_file_async(
                 ILAName,
                 ILAData,
-                f'17. Guarantor Legal Advice Warranty - {director["GUARANTORNAME"]}'
+                f'12. Guarantor Legal Advice Warranty - {director["GUARANTORNAME"]}'
             )
-            files.append((f'17. Guarantor Legal Advice Warranty - {director["GUARANTORNAME"]}.zip', file))
+            files.append((f'12. Guarantor Legal Advice Warranty - {director["GUARANTORNAME"]}.zip', file))
 
         
     zip_buffer = io.BytesIO()
