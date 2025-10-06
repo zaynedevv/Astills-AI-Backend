@@ -133,7 +133,7 @@ async def populate(
         template = get_templates_async(["SMSF/Purchase/BC/17. Individual Legal Advice Certificate"])
         print(template);
     
-        for director in data["directors"]:
+        for director in matter_info["directors"]:
             ILAData = {}
             for key in template[ILAName]:
                 if data.get(key):  # safer than data[key]
