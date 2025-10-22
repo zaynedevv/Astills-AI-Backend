@@ -80,9 +80,9 @@ DOCMOSIS_DIRECTORIES = {
     },
     'SMSF/Purchase/Source/': {
         'Borrowers-Checklist': {
-            'Wetsign': 'SMSF/Purchase/Source/WetSign/0. Borrowers Checklist SMSF Wetsign.docx',
+            'Wetsign': 'SMSF/Purchase/Source/WetSign/0. Borrowers Checklist SMSF - Wet sign Mortgage.docx',
             'NSW': 'SMSF/Purchase/Source/NSW/0. Borrowers Checklist SMSF NSW.docx',
-            'Non-Wetsign-NSW': 'SMSF/Purchase/Source/0. Borrowers Checklist SMSF Purchase.docx',
+            'Non-Wetsign-NSW': 'SMSF/Purchase/Source/0. Borrowers Checklist SMSF Purchase.docx,
         },
         'Standard': [
             'SMSF/Purchase/Source/1. Credit Guide.docx',
@@ -102,20 +102,20 @@ DOCMOSIS_DIRECTORIES = {
             'PI': 'SMSF/Purchase/Source/4. Loan Agreement SMSF PI.docx'
         },
         'NSW-Specific': [
-            'SMSF/Purchase/Source/5. National Mortgage Form NSW Source.docx',
+            'SMSF/Purchase/Source/5. National Mortgage Form - NSW Company.docx',
             'SMSF/Purchase/Source/12. Legal Advice Declaration NSW Guarantor.docx',
         ],
         'QLD-Specific': [
-            'SMSF/Purchase/Source/5. National Mortgage Form QLD Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - QLD Company.docx'
         ],
         'SA-Specific': [
-            'SMSF/Purchase/Source/5. National Mortgage Form SA Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - SA Company.docx'
         ],
         'VIC-Specific': [
-            'SMSF/Purchase/Source/5. National Mortgage Form VIC Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - VIC Company.docx'
         ],
         'ACT-Specific': [
-            'SMSF/Purchase/Source/5. National Mortgage Form ACT Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - ACT Company.docx'
         ]
     },
     'SMSF/Refi/Source/': {
@@ -159,6 +159,7 @@ DOCMOSIS_DIRECTORIES = {
     }
 
 }
+
 
 
 
