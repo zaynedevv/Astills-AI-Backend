@@ -9,7 +9,7 @@ def populateFile(templatePath, data, outputName):
     "templateName": templatePath,
     "data": data,
     "outputFormat": "pdf;docx",
-    "accessKey": "YWU4Mjk4NDMtNmExNy00NzUwLWJjMDQtOTNmYTQyNzY5MGM5Ojk4NjkwNjIzNjQ"
+    "accessKey": "MjE1MWNhZDQtZmQ5YS00MTNjLWE4ODMtZjNiZmVhNDVkODkyOjY4NTM2MTc0OTk"
     }
 
     headers = {'content-type': 'application/json'}
@@ -26,7 +26,7 @@ def getTemplateStucture(path):
 
     payload = {
         'templateName': path,
-        'accessKey': 'YWU4Mjk4NDMtNmExNy00NzUwLWJjMDQtOTNmYTQyNzY5MGM5Ojk4NjkwNjIzNjQ'
+        'accessKey': 'MjE1MWNhZDQtZmQ5YS00MTNjLWE4ODMtZjNiZmVhNDVkODkyOjY4NTM2MTc0OTk'
     }
     files=[
 
@@ -36,6 +36,7 @@ def getTemplateStucture(path):
     response = requests.request("POST", url, headers=headers, data=payload, files=files)
 
     return response.json()
+
 
 
 
