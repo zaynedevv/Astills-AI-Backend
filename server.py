@@ -193,7 +193,7 @@ async def populate(
             )
             files.append((f'12. Solicitors Certificate Guarantor - {director["GUARANTORNAME"]}.zip', file))
 
-     if lender == "Source" and transaction_type == "Purchase" and matter_info["propery_state"] == "NSW":
+    if lender == "Source" and transaction_type == "Purchase" and matter_info["propery_state"] == "NSW":
         ILAName = "SMSF/Purchase/Source/12. Legal Advice Declaration - NSW.docx.docx"
         template = await get_templates_async([ILAName])
         print(template);
