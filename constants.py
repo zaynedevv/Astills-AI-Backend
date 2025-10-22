@@ -101,7 +101,6 @@ DOCMOSIS_DIRECTORIES = {
         },
         'NSW-Specific': [
             'SMSF/Purchase/Source/5. National Mortgage Form - NSW Company.docx',
-            'SMSF/Purchase/Source/12. Legal Advice Declaration - NSW.docx',
         ],
         'QLD-Specific': [
             'SMSF/Purchase/Source/5. National Mortgage Form - QLD Company.docx'
@@ -156,6 +155,7 @@ DOCMOSIS_DIRECTORIES = {
     }
 
 }
+
 
 
 
