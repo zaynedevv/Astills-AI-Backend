@@ -92,7 +92,7 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Purchase/Source/10. Disbursement Direction Authority Source.docx',
             'SMSF/Purchase/Source/7. Guarantee SMSF Holding Trustee.docx',
             'SMSF/Purchase/Source/6. Privacy Policy & Collection Notice.docx',
-            'SMSF/Purchase/Source/9. Purchase Acknowledgement Legal Financial Advice.docx',
+            'SMSF/Purchase/Source/9. Purchase - Certificate (Legal and Financial Advice).docx',
             'SMSF/Purchase/Source/8. SMSF Member Guarantee.docx',
             'SMSF/Purchase/Source/12. Solicitors Certificate Guarantor.docx',
             
@@ -159,6 +159,7 @@ DOCMOSIS_DIRECTORIES = {
     }
 
 }
+
 
 
 
