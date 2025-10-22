@@ -82,7 +82,7 @@ DOCMOSIS_DIRECTORIES = {
         'Borrowers-Checklist': {
             'Wetsign': 'SMSF/Purchase/Source/WetSign/0. Borrowers Checklist SMSF - Wet sign Mortgage.docx',
             'NSW': 'SMSF/Purchase/Source/NSW/0. Borrowers Checklist SMSF NSW.docx',
-            'Non-Wetsign-NSW': 'SMSF/Purchase/Source/0. Borrowers Checklist SMSF Purchase.docx,
+            'Non-Wetsign-NSW': 'SMSF/Purchase/Source/0. Borrowers Checklist SMSF Purchase.docx',
         },
         'Standard': [
             'SMSF/Purchase/Source/1. Credit Guide.docx',
@@ -159,6 +159,7 @@ DOCMOSIS_DIRECTORIES = {
     }
 
 }
+
 
 
 
