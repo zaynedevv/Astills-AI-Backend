@@ -140,7 +140,6 @@ DOCMOSIS_DIRECTORIES = {
         },
         'NSW-Specific': [
             'SMSF/Refi/Source/5. National Mortgage Form NSW Source.docx',
-            'SMSF/Refi/Source/12. Legal Advice Declaration NSW Guarantor.docx',
         ],
         'QLD-Specific': [
             'SMSF/Refi/Source/5. National Mortgage Form QLD Source.docx'
@@ -157,6 +156,7 @@ DOCMOSIS_DIRECTORIES = {
     }
 
 }
+
 
 
 
