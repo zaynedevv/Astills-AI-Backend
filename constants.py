@@ -117,8 +117,8 @@ DOCMOSIS_DIRECTORIES = {
     },
     'SMSF/Refi/Source/': {
         'Borrowers-Checklist': {
-            'Wetsign': 'SMSF/Refi/Source/WetSign/0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage).docx',
-            'Non-Wetsign-NSW': 'SMSF/Refi/Source/0. Borrowers Checklist SMSF Refi (no ILA).docx',
+            'Wetsign': 'SMSF/Refi/Source/WetSign/0. Borrowers Checklist SMSF Refi (wet sign mortgage).docx',
+            'Non-Wetsign-NSW': '0. Borrowers Checklist SMSF Refi (no ILA).docx',
         },
         'Standard': [
             'SMSF/Refi/Source/1. Credit Guide.docx',
@@ -128,7 +128,7 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Refi/Source/10. Disbursement Direction Authority Source.docx',
             'SMSF/Refi/Source/7. Guarantee SMSF Holding Trustee.docx',
             'SMSF/Refi/Source/6. Privacy Policy Collection Notice.docx',
-            'SMSF/Refi/Source/9. Purchase Acknowledgement Legal Financial Advice.docx',
+            'SMSF/Refi/Source/9. Refinance - Certificate (Legal and Financial Advice) SMSF.',
             'SMSF/Refi/Source/8. SMSF Member Guarantee.docx',
             'SMSF/Refi/Source/12. Solicitors Certificate Guarantor.docx',
             
@@ -137,24 +137,25 @@ DOCMOSIS_DIRECTORIES = {
             'IO': 'SMSF/Refi/Source/4. Loan Agreement SMSF IO.docx',
             'PI': 'SMSF/Refi/Source/4. Loan Agreement SMSF PI.docx'
         },
-        'NSW-Specific': [
-            'SMSF/Refi/Source/5. National Mortgage Form NSW Source.docx',
+          'NSW-Specific': [
+            'SMSF/Purchase/Source/5. National Mortgage Form - NSW Company.docx',
         ],
         'QLD-Specific': [
-            'SMSF/Refi/Source/5. National Mortgage Form QLD Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - QLD Company.docx'
         ],
         'SA-Specific': [
-            'SMSF/Refi/Source/5. National Mortgage Form SA Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - SA Company.docx'
         ],
         'VIC-Specific': [
-            'SMSF/Refi/Source/5. National Mortgage Form VIC Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - VIC Company.docx'
         ],
         'ACT-Specific': [
-            'SMSF/Refi/Source/5. National Mortgage Form ACT Source.docx'
+            'SMSF/Purchase/Source/5. National Mortgage Form - ACT Company.docx'
         ]
     }
 
 }
+
 
 
 
