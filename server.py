@@ -12,6 +12,7 @@ from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templ
 
 import io
 import zipfile
+import os
 
 
 origins = ["*"]
