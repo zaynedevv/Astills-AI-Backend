@@ -230,16 +230,25 @@ async def populate(
     #     headers={"Content-Disposition": "attachment; filename=documents.zip"}
     # )
     zip_buffer = io.BytesIO()
-        
-    with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
+
+    with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as final_zip:
         for filename, content in files:
-            if filename.lower().endswith(".pdf"):
-                zipf.writestr(f"pdfs/{filename}", content)
-            elif filename.lower().endswith(".docx"):
-                zipf.writestr(f"docs/{filename}", content)
-            else:
-                # Optional: put other file types in a separate folder
-                zipf.writestr(f"others/{filename}", content)
+            # content is the binary of a .zip file
+            inner_zip_bytes = io.BytesIO(content)
+
+            try:
+                with zipfile.ZipFile(inner_zip_bytes, "r") as inner_zip:
+                    for inner_name in inner_zip.namelist():
+                        if inner_name.lower().endswith(".pdf"):
+                            final_zip.writestr(f"pdfs/{inner_name}", inner_zip.read(inner_name))
+                        elif inner_name.lower().endswith(".docx"):
+                            final_zip.writestr(f"docs/{inner_name}", inner_zip.read(inner_name))
+                        else:
+                            # Optional: include other files if you want
+                            final_zip.writestr(f"others/{inner_name}", inner_zip.read(inner_name))
+            except zipfile.BadZipFile:
+                # Handle non-zip inputs gracefully
+                pass
 
     zip_buffer.seek(0)
     return StreamingResponse(
@@ -247,6 +256,5 @@ async def populate(
         media_type="application/zip",
         headers={"Content-Disposition": "attachment; filename=documents.zip"}
     )
-
 
         
