@@ -231,39 +231,39 @@ async def populate(
     #     headers={"Content-Disposition": "attachment; filename=documents.zip"}
     # )
     zip_buffer = io.BytesIO()
-
+    
     with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as final_zip:
         for outer_filename, outer_content in files:
-            outer_name = os.path.splitext(outer_filename)[0]  # remove .zip extension
             inner_zip_bytes = io.BytesIO(outer_content)
-
+    
             try:
                 with zipfile.ZipFile(inner_zip_bytes, "r") as inner_zip:
                     for inner_name in inner_zip.namelist():
                         if inner_name.endswith("/"):
                             continue  # skip directories
-
+    
+                        # Extract base filename (ignore any folder paths inside zip)
                         base_inner_name = os.path.basename(inner_name)
-
+    
+                        # Make sure it has a clean extension (no .zip.docx, etc.)
+                        base_inner_name = os.path.splitext(base_inner_name)[0]
+    
                         if inner_name.lower().endswith(".pdf"):
                             final_zip.writestr(
-                                f"pdfs/{outer_name}/{base_inner_name}",
+                                f"pdfs/{base_inner_name}.pdf",
                                 inner_zip.read(inner_name)
                             )
                         elif inner_name.lower().endswith(".docx"):
                             final_zip.writestr(
-                                f"docs/{outer_name}/{base_inner_name}",
+                                f"docs/{base_inner_name}.docx",
                                 inner_zip.read(inner_name)
                             )
-                        else:
-                            final_zip.writestr(
-                                f"others/{outer_name}/{base_inner_name}",
-                                inner_zip.read(inner_name)
-                            )
+                        # else: skip non-docx/pdf files entirely
+    
             except zipfile.BadZipFile:
-                # If not a valid zip, skip
+                # Skip invalid zip files gracefully
                 pass
-
+    
     zip_buffer.seek(0)
     return StreamingResponse(
         zip_buffer,
