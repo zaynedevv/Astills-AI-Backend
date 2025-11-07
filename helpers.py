@@ -104,12 +104,13 @@ async def populate_file_async(template_path: str, data: dict, output_name: str) 
 async def generate_all_pdfs(data: dict) -> list[tuple[str, bytes]]:
     tasks = []
     for path, template in data.items():
-        file_name = path.split("/")[-1] + ".zip"
+        file_name = path.split("/")[-1]
         tasks.append(populate_file_async(path, template, file_name))
     
     results = await asyncio.gather(*tasks)
     # Combine file names with content
     return [(path.split("/")[-1] + ".zip", content) for path, content in zip(data.keys(), results)]
+
 
 
 
