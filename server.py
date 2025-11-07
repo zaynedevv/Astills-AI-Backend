@@ -232,22 +232,35 @@ async def populate(
     zip_buffer = io.BytesIO()
 
     with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as final_zip:
-        for filename, content in files:
-            # content is the binary of a .zip file
-            inner_zip_bytes = io.BytesIO(content)
+        for outer_filename, outer_content in files:
+            outer_name = os.path.splitext(outer_filename)[0]  # remove .zip extension
+            inner_zip_bytes = io.BytesIO(outer_content)
 
             try:
                 with zipfile.ZipFile(inner_zip_bytes, "r") as inner_zip:
                     for inner_name in inner_zip.namelist():
+                        if inner_name.endswith("/"):
+                            continue  # skip directories
+
+                        base_inner_name = os.path.basename(inner_name)
+
                         if inner_name.lower().endswith(".pdf"):
-                            final_zip.writestr(f"pdfs/{inner_name}", inner_zip.read(inner_name))
+                            final_zip.writestr(
+                                f"pdfs/{outer_name}/{base_inner_name}",
+                                inner_zip.read(inner_name)
+                            )
                         elif inner_name.lower().endswith(".docx"):
-                            final_zip.writestr(f"docs/{inner_name}", inner_zip.read(inner_name))
+                            final_zip.writestr(
+                                f"docs/{outer_name}/{base_inner_name}",
+                                inner_zip.read(inner_name)
+                            )
                         else:
-                            # Optional: include other files if you want
-                            final_zip.writestr(f"others/{inner_name}", inner_zip.read(inner_name))
+                            final_zip.writestr(
+                                f"others/{outer_name}/{base_inner_name}",
+                                inner_zip.read(inner_name)
+                            )
             except zipfile.BadZipFile:
-                # Handle non-zip inputs gracefully
+                # If not a valid zip, skip
                 pass
 
     zip_buffer.seek(0)
@@ -256,5 +269,4 @@ async def populate(
         media_type="application/zip",
         headers={"Content-Disposition": "attachment; filename=documents.zip"}
     )
-
         
