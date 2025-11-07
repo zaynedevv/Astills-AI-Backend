@@ -218,10 +218,28 @@ async def populate(
     
 
         
+    # zip_buffer = io.BytesIO()
+    # with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
+    #     for filename, content in files:
+    #         zipf.writestr(filename, content)
+
+    # zip_buffer.seek(0)
+    # return StreamingResponse(
+    #     zip_buffer,
+    #     media_type="application/zip",
+    #     headers={"Content-Disposition": "attachment; filename=documents.zip"}
+    # )
     zip_buffer = io.BytesIO()
+        
     with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
         for filename, content in files:
-            zipf.writestr(filename, content)
+            if filename.lower().endswith(".pdf"):
+                zipf.writestr(f"pdfs/{filename}", content)
+            elif filename.lower().endswith(".docx"):
+                zipf.writestr(f"docs/{filename}", content)
+            else:
+                # Optional: put other file types in a separate folder
+                zipf.writestr(f"others/{filename}", content)
 
     zip_buffer.seek(0)
     return StreamingResponse(
