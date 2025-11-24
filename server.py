@@ -96,6 +96,9 @@ async def populate(
     
     #Get Directories Associated with Matter Type
     directoryIndex = matter_type + '/' + transaction_type + '/' + lender + '/'
+    if "Commercial" in transaction_type:
+        directoryIndex = matter_type + '/' + transaction_type + '/'
+    
     matterDirectories = DOCMOSIS_DIRECTORIES.get(directoryIndex)
 
     if not matterDirectories: return JSONResponse(status_code=404, content={"error": "Cannot Find Document Directory"})
