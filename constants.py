@@ -193,10 +193,51 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Purchase - Commercial/6. National Mortgage Form VIC.docx'
         ]
         
+    },
+
+    "SMSF/Refi-Commercial/": {
+        'Borrowers-Checklist': {
+            "Non-Wetsign-NSW": "SMSF/Refi - Commercial/0. Borrowers Checklist SMSF Refi ILA Required COMMERCIAL.docx"
+        },
+         'Standard': [
+            'SMSF/Refi - Commercial/12. Company Guarantee Warranty.docx',
+            'SMSF/Refi - Commercial/13. Company Guarantee Warranty (ShareHolders).docx',
+            'SMSF/Refi - Commercial/16. Direct Debit Authority.docx',
+            'SMSF/Refi - Commercial/11. Guarantee & Indemnity June 23.docx',
+            'SMSF/Refi - Commercial/10. Guarantee Indemnity Bare Trustee June 23.docx',
+            'SMSF/Refi - Commercial/7. Privacy Consent Form BC July 26 2024.docx',
+            'SMSF/Refi - Commercial/14. Warranties Fund Mortgaged Property June 23.docx',
+            'SMSF/Refi - Commercial/1. Credit Guide.docx',
+            'SMSF/Refi - Commercial/2. Loan Agreement - Terms and Conditions.docx',
+            'SMSF/Refi - Commercial/3. Mortgage Common Provisions.docx',
+            'SMSF/Refi - Commercial/4. Guarantee Information Statement.docx',
+            'SMSF/Refi - Commercial/9. SMSF Financing Agreement.docx',
+            'SMSF/Refi - Commercial/8. Mortgage Side Agreement.docx',
+            'SMSF/Refi - Commercial/15. Disbursement Direction Authority - Refi COMMERCIAL.docx',
+
+        ],
+        'Loan-Agreement': {
+            "IO": "SMSF/Refi - Commercial/5. Loan Agreement - Loan Offer - IO Refi - COMMERCIAL.docx",
+            "PI": "SMSF/Refi - Commercial/5. Loan Agreement - Loan Offer - P&I Refi - COMMERCIAL.docx"
+        },
+         'NSW-Specific': [
+            'SMSF/Refi - Commercial/6. National Mortgage Form NSW.docx'
+        ],
+        'QLD-Specific': [
+            'SMSF/Refi - Commercial/6. National Mortgage Form QLD.docx'
+        ],
+        'SA-Specific': [
+            'SMSF/Refi - Commercial/6. National Mortgage Form SA.docx'
+        ],
+        'VIC-Specific': [
+            'SMSF/Refi - Commercial/6. National Mortgage Form VIC.docx'
+        ]
+        
     }
     
 
 }
+
 
 
 
