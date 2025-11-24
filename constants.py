@@ -160,7 +160,19 @@ DOCMOSIS_DIRECTORIES = {
             "Non-Wetsign-NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist - Purchase - COMMERCIAL.docx"
         },
          'Standard': [
-          
+            'SMSF/Purchase - Commerical/BC/12. Company Guarantee Warranty.docx',
+            'SMSF/Purchase - Commerical/BC/13. Company Guarantee Warranty (ShareHolders).docx',
+            'SMSF/Purchase - Commerical/BC/16. Direct Debit Authority.docx',
+            'SMSF/Purchase - Commerical/BC/11. Guarantee & Indemnity June 23.docx',
+            'SMSF/Purchase - Commericale/BC/10. Guarantee Indemnity Bare Trustee June 23.docx',
+            'SMSF/Purchase - Commerical/BC/7. Privacy Consent Form BC July 26 2024.docx',
+            'SMSF/Purchase - Commerical/BC/14. Warranties Fund Mortgaged Property June 23.docx',
+            'SMSF/Purchase - Commerical/BC/1. Credit Guide.docx',
+            'SMSF/Purchase - Commerical/BC/2. Loan Agreement - Terms and Conditions.docx',
+            'SMSF/Purchase - Commerical/BC/3. Mortgage Common Provisions.docx',
+            'SMSF/Purchase - Commerical/BC/4. Guarantee Information Statement.docx',
+            'SMSF/Purchase - Commerical/BC/9. SMSF Financing Agreement.docx',
+            'SMSF/Purchase - Commerical/BC/8. Mortgage Side Agreement.docx'
             'SMSF/Purchase - Commerical/15. Disbursement Direction Authority - Purchase COMMERCIAL.docx',
 
         ],
@@ -173,6 +185,7 @@ DOCMOSIS_DIRECTORIES = {
     
 
 }
+
 
 
 
