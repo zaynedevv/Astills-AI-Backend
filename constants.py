@@ -154,7 +154,7 @@ DOCMOSIS_DIRECTORIES = {
         ]
     },
 
-    "SMSF/Purchase-Commercial": {
+    "SMSF/Purchase-Commercial/": {
         'Borrowers-Checklist': {
             "NSW": "SMSF/Purchase - Commerical/NSW/0. Borrowers Checklist - Purchase  NSW - COMMERCIAL.docx",
             "Non-Wetsign-NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist - Purchase - COMMERCIAL.docx"
@@ -185,6 +185,7 @@ DOCMOSIS_DIRECTORIES = {
     
 
 }
+
 
 
 
