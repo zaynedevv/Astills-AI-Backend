@@ -172,7 +172,7 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Purchase - Commercial/3. Mortgage Common Provisions.docx',
             'SMSF/Purchase - Commercial/4. Guarantee Information Statement.docx',
             'SMSF/Purchase - Commercial/9. SMSF Financing Agreement.docx',
-            'SMSF/Purchase - Commercial/8. Mortgage Side Agreement.docx'
+            'SMSF/Purchase - Commercial/8. Mortgage Side Agreement.docx',
             'SMSF/Purchase - Commercial/15. Disbursement Direction Authority - Purchase COMMERCIAL.docx',
 
         ],
@@ -185,6 +185,7 @@ DOCMOSIS_DIRECTORIES = {
     
 
 }
+
 
 
 
