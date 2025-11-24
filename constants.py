@@ -152,9 +152,28 @@ DOCMOSIS_DIRECTORIES = {
         'ACT-Specific': [
             'SMSF/Purchase/Source/5. National Mortgage Form - ACT Company.docx'
         ]
+    },
+
+    "SMSF/Purchase - Commercial": {
+        'Borrowers-Checklist': {
+            "NSW": "SMSF/Purchase - Commerical/NSW/0. Borrowers Checklist - Purchase  NSW - COMMERCIAL.docx",
+            "Non-Wetsign-NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist - Purchase - COMMERCIAL.docx"
+        },
+         'Standard': [
+          
+            'SMSF/Purchase - Commerical/15. Disbursement Direction Authority - Purchase COMMERCIAL.docx',
+
+        ],
+        'Loan-Agreement': {
+            "IO": "SMSF/Purchase - Commercial/5. Loan Agreement - Loan Offer - IO Purchase - COMMERCIAL.docx",
+            "PI": "SMSF/Purchase - Commercial/5. Loan Agreement - Loan Offer - P&I Purchase - COMMERCIAL.docx"
+        }
+        
     }
+    
 
 }
+
 
 
 
