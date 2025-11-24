@@ -179,12 +179,25 @@ DOCMOSIS_DIRECTORIES = {
         'Loan-Agreement': {
             "IO": "SMSF/Purchase - Commercial/5. Loan Agreement - Loan Offer - IO Purchase - COMMERCIAL.docx",
             "PI": "SMSF/Purchase - Commercial/5. Loan Agreement - Loan Offer - P&I Purchase - COMMERCIAL.docx"
-        }
+        },
+         'NSW-Specific': [
+            'SMSF/Purchase - Commercial/6. National Mortgage Form NSW.docx'
+        ],
+        'QLD-Specific': [
+            'SMSF/Purchase - Commercial/6. National Mortgage Form QLD.docx'
+        ],
+        'SA-Specific': [
+            'SMSF/Purchase - Commercial/6. National Mortgage Form SA.docx'
+        ],
+        'VIC-Specific': [
+            'SMSF/Purchase - Commercial/6. National Mortgage Form VIC.docx'
+        ]
         
     }
     
 
 }
+
 
 
 
