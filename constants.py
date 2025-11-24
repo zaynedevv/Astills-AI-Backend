@@ -156,24 +156,24 @@ DOCMOSIS_DIRECTORIES = {
 
     "SMSF/Purchase-Commercial/": {
         'Borrowers-Checklist': {
-            "NSW": "SMSF/Purchase - Commerical/NSW/0. Borrowers Checklist - Purchase  NSW - COMMERCIAL.docx",
+            "NSW": "SMSF/Purchase - Commercial/NSW/0. Borrowers Checklist - Purchase  NSW - COMMERCIAL.docx",
             "Non-Wetsign-NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist - Purchase - COMMERCIAL.docx"
         },
          'Standard': [
-            'SMSF/Purchase - Commerical/12. Company Guarantee Warranty.docx',
-            'SMSF/Purchase - Commerical/13. Company Guarantee Warranty (ShareHolders).docx',
-            'SMSF/Purchase - Commerical/16. Direct Debit Authority.docx',
-            'SMSF/Purchase - Commerical/11. Guarantee & Indemnity June 23.docx',
-            'SMSF/Purchase - Commericale/10. Guarantee Indemnity Bare Trustee June 23.docx',
-            'SMSF/Purchase - Commerical/7. Privacy Consent Form BC July 26 2024.docx',
-            'SMSF/Purchase - Commerical/14. Warranties Fund Mortgaged Property June 23.docx',
-            'SMSF/Purchase - Commerical/1. Credit Guide.docx',
-            'SMSF/Purchase - Commerical/2. Loan Agreement - Terms and Conditions.docx',
-            'SMSF/Purchase - Commerical/3. Mortgage Common Provisions.docx',
-            'SMSF/Purchase - Commerical/4. Guarantee Information Statement.docx',
-            'SMSF/Purchase - Commerical/9. SMSF Financing Agreement.docx',
-            'SMSF/Purchase - Commerical/8. Mortgage Side Agreement.docx'
-            'SMSF/Purchase - Commerical/15. Disbursement Direction Authority - Purchase COMMERCIAL.docx',
+            'SMSF/Purchase - Commercial/12. Company Guarantee Warranty.docx',
+            'SMSF/Purchase - Commercial/13. Company Guarantee Warranty (ShareHolders).docx',
+            'SMSF/Purchase - Commercial/16. Direct Debit Authority.docx',
+            'SMSF/Purchase - Commercial/11. Guarantee & Indemnity June 23.docx',
+            'SMSF/Purchase - Commercial/10. Guarantee Indemnity Bare Trustee June 23.docx',
+            'SMSF/Purchase - Commercial/7. Privacy Consent Form BC July 26 2024.docx',
+            'SMSF/Purchase - Commercial/14. Warranties Fund Mortgaged Property June 23.docx',
+            'SMSF/Purchase - Commercial/1. Credit Guide.docx',
+            'SMSF/Purchase - Commercial/2. Loan Agreement - Terms and Conditions.docx',
+            'SMSF/Purchase - Commercial/3. Mortgage Common Provisions.docx',
+            'SMSF/Purchase - Commercial/4. Guarantee Information Statement.docx',
+            'SMSF/Purchase - Commercial/9. SMSF Financing Agreement.docx',
+            'SMSF/Purchase - Commercial/8. Mortgage Side Agreement.docx'
+            'SMSF/Purchase - Commercial/15. Disbursement Direction Authority - Purchase COMMERCIAL.docx',
 
         ],
         'Loan-Agreement': {
@@ -185,6 +185,7 @@ DOCMOSIS_DIRECTORIES = {
     
 
 }
+
 
 
 
