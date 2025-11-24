@@ -5,7 +5,7 @@ import httpx
 from typing import List, Dict, Any
 
 DOCMOSIS_API_URL = "https://au1.dws4.docmosis.com/api/getSampleData"
-ACCESS_KEY = "MjE1MWNhZDQtZmQ5YS00MTNjLWE4ODMtZjNiZmVhNDVkODkyOjY4NTM2MTc0OTk"
+ACCESS_KEY = "MjlmMWJhYzItNTZiZS00MzM2LWIyNGQtNGMwMGQ1NGE3OTU1OjQ4NjcyOTEwNQ"
 
 def getBorrowerChecklist(state, transaction_type, directories):
     if state in ['WA', 'TAS', 'NT']:
@@ -89,7 +89,7 @@ async def populate_file_async(template_path: str, data: dict, output_name: str) 
         "templateName": template_path,
         "data": data,
         "outputFormat": "pdf;docx",
-        "accessKey": "MjE1MWNhZDQtZmQ5YS00MTNjLWE4ODMtZjNiZmVhNDVkODkyOjY4NTM2MTc0OTk"
+        "accessKey": "MjlmMWJhYzItNTZiZS00MzM2LWIyNGQtNGMwMGQ1NGE3OTU1OjQ4NjcyOTEwNQ"
     }
 
     async with httpx.AsyncClient() as client:
@@ -114,6 +114,7 @@ async def generate_all_pdfs(data: dict) -> list[tuple[str, bytes]]:
     results = await asyncio.gather(*tasks)
     # Combine file names with content
     return [(path.split("/")[-1] + ".zip", content) for path, content in zip(data.keys(), results)]
+
 
 
 
