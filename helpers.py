@@ -9,7 +9,13 @@ ACCESS_KEY = "MjlmMWJhYzItNTZiZS00MzM2LWIyNGQtNGMwMGQ1NGE3OTU1OjQ4NjcyOTEwNQ"
 
 def getBorrowerChecklist(state, transaction_type, directories):
     if state in ['WA', 'TAS', 'NT']:
-        return directories['Borrowers-Checklist']['Wetsign']
+        checklist = directories.get('Borrowers-Checklist')
+        checklist = checklist.get('Wetsign')
+        if (checklist) {
+            return checklist
+        } else {
+            return None
+        }
     elif state == 'NSW' and (transaction_type == "Purchase" or transaction_type == "Purchase-Commercial"):
         return directories['Borrowers-Checklist']['NSW']
     else:
@@ -114,6 +120,7 @@ async def generate_all_pdfs(data: dict) -> list[tuple[str, bytes]]:
     results = await asyncio.gather(*tasks)
     # Combine file names with content
     return [(path.split("/")[-1] + ".zip", content) for path, content in zip(data.keys(), results)]
+
 
 
 
