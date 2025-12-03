@@ -7,6 +7,10 @@ from typing import Optional
 from populateTemplate import populateFile, getTemplateStucture
 from constants import DOCMOSIS_DIRECTORIES
 from fastapi.responses import StreamingResponse
+from docxtpl import DocxTemplate
+from io import BytesIO
+import zipfile
+
 
 from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async
 
@@ -122,155 +126,172 @@ async def populate(
 
     matterFiles.extend(matterDirectories.get('Standard', []))
 
-    # templates = getTemplates(matterFiles)
-    templates = await get_templates_async(matterFiles, concurrency=93)
-    
-    data = structureJson(matter_info, templates)
 
-    print(data)
+    #Matter files completed here
+    
+    zip_buffer = BytesIO()
 
-    files = await generate_all_pdfs(data)
+    with zipfile.ZipFile(zip_buffer, "w") as zipf:
 
-    #Individual Legal Advice Certificate Logic
-    if lender == "BC" and transaction_type == "Purchase":
-        ILAName = "SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx"
-        template = await get_templates_async([ILAName])
-        print(template);
-    
-        for director in matter_info["directors"]:
-            ILAData = {}
-            for key in template[ILAName]:
-                if data.get(key):  # safer than data[key]
-                    ILAData[key] = data[key]
-                else:
-                    ILAData[key] = director.get(key)
-            print(ILAData)
-    
-            file = await populate_file_async(
-                ILAName,
-                ILAData,
-                f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}'
-            )
-            files.append((f'17. Individual Legal Advice Certificate - {director["GUARANTORNAME"]}.zip', file))
+        # ---- MAIN TEMPLATE FILES ----
+        for file in matterFiles:
+            fileName = file.split('/')[-1]
+            print("Processing File: " + fileName)
 
+            doc_temp = DocxTemplate(file)
+            doc_temp.render(matter_info)
 
-    #Guarantor Legal Advice Warranty
-    if lender == "BC" and transaction_type == "Refi":
-        ILAName = "SMSF/Refi/BC/12. Guarantor Legal Advice Warranty.docx"
-        template = await get_templates_async([ILAName])
-        print(template);
-    
-        for director in matter_info["directors"]:
-            ILAData = {}
-            for key in template[ILAName]:
-                if data.get(key):  # safer than data[key]
-                    ILAData[key] = data[key]
-                else:
-                    ILAData[key] = director.get(key)
-            print(ILAData)
-    
-            file = await populate_file_async(
-                ILAName,
-                ILAData,
-                f'12. Guarantor Legal Advice Warranty - {director["GUARANTORNAME"]}'
-            )
-            files.append((f'12. Guarantor Legal Advice Warranty - {director["GUARANTORNAME"]}.zip', file))
+            file_buffer = BytesIO()
+            doc_temp.save(file_buffer)
+            file_buffer.seek(0)
 
-    if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] != "NSW":
-        ILAName = "SMSF/Purchase/Source/12. Solicitors Certificate Guarantor.docx"
-        template = await get_templates_async([ILAName])
-        print(template);
-    
-        for director in matter_info["directors"]:
-            ILAData = {}
-            for key in template[ILAName]:
-                if data.get(key):  # safer than data[key]
-                    ILAData[key] = data[key]
-                else:
-                    ILAData[key] = director.get(key)
-            print(ILAData)
-    
-            file = await populate_file_async(
-                ILAName,
-                ILAData,
-                f'12. Solicitors Certificate Guarantor - {director["GUARANTORNAME"]}'
-            )
-            files.append((f'12. Solicitors Certificate Guarantor - {director["GUARANTORNAME"]}.zip', file))
+            zipf.writestr(fileName, file_buffer.read())
+            print("merged")
 
-    if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] == "NSW":
-        ILAName = "SMSF/Purchase/Source/12. Legal Advice Declaration - NSW.docx"
-        template = await get_templates_async([ILAName])
-        print(template);
-    
-        for director in matter_info["directors"]:
-            ILAData = {}
-            for key in template[ILAName]:
-                if data.get(key):  # safer than data[key]
-                    ILAData[key] = data[key]
-                else:
-                    ILAData[key] = director.get(key)
-            print(ILAData)
-    
-            file = await populate_file_async(
-                ILAName,
-                ILAData,
-                f'12. Legal Advice Declaration - NSW - {director["GUARANTORNAME"]}'
-            )
-            files.append((f'12. Legal Advice Declaration - NSW - {director["GUARANTORNAME"]}.zip', file))
+        # ---- INDIVIDUAL LEGAL ADVICE: BC Purchase ----
+        if lender == "BC" and transaction_type == "Purchase":
+            template_path = "SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx"
+            for director in matter_info["directors"]:
+                context = matter_info.copy()
+                context.update(director)
+
+                doc_temp = DocxTemplate(template_path)
+                doc_temp.render(context)
+
+                filename = (
+                    template_path.split('/')[-1][:-5]
+                    + f" - {director['GUARANTORNAME']}.docx"
+                )
+
+                file_buffer = BytesIO()
+                doc_temp.save(file_buffer)
+                file_buffer.seek(0)
+                zipf.writestr(filename, file_buffer.read())
+
+        # ---- GUARANTOR LEGAL ADVICE WARRANTY: BC Refi ----
+        if lender == "BC" and transaction_type == "Refi":
+            template_path = "SMSF/Refi/BC/12. Guarantor Legal Advice Warranty.docx"
+            for director in matter_info["directors"]:
+                context = matter_info.copy()
+                context.update(director)
+
+                doc_temp = DocxTemplate(template_path)
+                doc_temp.render(context)
+
+                filename = (
+                    template_path.split('/')[-1][:-5]
+                    + f" - {director['GUARANTORNAME']}.docx"
+                )
+
+                file_buffer = BytesIO()
+                doc_temp.save(file_buffer)
+                file_buffer.seek(0)
+                zipf.writestr(filename, file_buffer.read())
+
+        # ---- SOURCE PURCHASE (not NSW) ----
+        if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] != "NSW":
+            template_path = "SMSF/Purchase/Source/12. Solicitors Certificate Guarantor.docx"
+            for director in matter_info["directors"]:
+                context = matter_info.copy()
+                context.update(director)
+
+                doc_temp = DocxTemplate(template_path)
+                doc_temp.render(context)
+
+                filename = (
+                    template_path.split('/')[-1][:-5]
+                    + f" - {director['GUARANTORNAME']}.docx"
+                )
+
+                file_buffer = BytesIO()
+                doc_temp.save(file_buffer)
+                file_buffer.seek(0)
+                zipf.writestr(filename, file_buffer.read())
+
+        # ---- SOURCE PURCHASE (NSW) ----
+        if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] == "NSW":
+            template_path = "SMSF/Purchase/Source/12. Legal Advice Declaration - NSW.docx"
+            for director in matter_info["directors"]:
+                context = matter_info.copy()
+                context.update(director)
+
+                doc_temp = DocxTemplate(template_path)
+                doc_temp.render(context)
+
+                filename = (
+                    template_path.split('/')[-1][:-5]
+                    + f" - {director['GUARANTORNAME']}.docx"
+                )
+
+                file_buffer = BytesIO()
+                doc_temp.save(file_buffer)
+                file_buffer.seek(0)
+                zipf.writestr(filename, file_buffer.read())
+
+    # FINAL ZIP RESPONSE
+    zip_buffer.seek(0)
+
+    return StreamingResponse(
+        zip_buffer,
+        media_type="application/zip",
+        headers={
+            "Content-Disposition": "attachment; filename=merged_documents.zip"
+        },
+    )
 
 
     
 
         
-    # zip_buffer = io.BytesIO()
-    # with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
-    #     for filename, content in files:
-    #         zipf.writestr(filename, content)
+    # # zip_buffer = io.BytesIO()
+    # # with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as zipf:
+    # #     for filename, content in files:
+    # #         zipf.writestr(filename, content)
 
+    # # zip_buffer.seek(0)
+    # # return StreamingResponse(
+    # #     zip_buffer,
+    # #     media_type="application/zip",
+    # #     headers={"Content-Disposition": "attachment; filename=documents.zip"}
+    # # )
+    # zip_buffer = io.BytesIO()
+    
+    # with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as final_zip:
+    #     for outer_filename, outer_content in files:
+    #         inner_zip_bytes = io.BytesIO(outer_content)
+    
+    #         try:
+    #             with zipfile.ZipFile(inner_zip_bytes, "r") as inner_zip:
+    #                 for inner_name in inner_zip.namelist():
+    #                     if inner_name.endswith("/"):
+    #                         continue  # skip directories
+    
+    #                     # Extract base filename (ignore any folder paths inside zip)
+    #                     base_inner_name = os.path.basename(inner_name)
+    
+    #                     # Make sure it has a clean extension (no .zip.docx, etc.)
+    #                     base_inner_name = os.path.splitext(base_inner_name)[0]
+    
+    #                     if inner_name.lower().endswith(".pdf"):
+    #                         final_zip.writestr(
+    #                             f"pdfs/{base_inner_name}.pdf",
+    #                             inner_zip.read(inner_name)
+    #                         )
+    #                     elif inner_name.lower().endswith(".docx"):
+    #                         final_zip.writestr(
+    #                             f"docs/{base_inner_name}.docx",
+    #                             inner_zip.read(inner_name)
+    #                         )
+    #                     # else: skip non-docx/pdf files entirely
+    
+    #         except zipfile.BadZipFile:
+    #             # Skip invalid zip files gracefully
+    #             pass
+    
     # zip_buffer.seek(0)
     # return StreamingResponse(
     #     zip_buffer,
     #     media_type="application/zip",
     #     headers={"Content-Disposition": "attachment; filename=documents.zip"}
     # )
-    zip_buffer = io.BytesIO()
-    
-    with zipfile.ZipFile(zip_buffer, "w", zipfile.ZIP_DEFLATED) as final_zip:
-        for outer_filename, outer_content in files:
-            inner_zip_bytes = io.BytesIO(outer_content)
-    
-            try:
-                with zipfile.ZipFile(inner_zip_bytes, "r") as inner_zip:
-                    for inner_name in inner_zip.namelist():
-                        if inner_name.endswith("/"):
-                            continue  # skip directories
-    
-                        # Extract base filename (ignore any folder paths inside zip)
-                        base_inner_name = os.path.basename(inner_name)
-    
-                        # Make sure it has a clean extension (no .zip.docx, etc.)
-                        base_inner_name = os.path.splitext(base_inner_name)[0]
-    
-                        if inner_name.lower().endswith(".pdf"):
-                            final_zip.writestr(
-                                f"pdfs/{base_inner_name}.pdf",
-                                inner_zip.read(inner_name)
-                            )
-                        elif inner_name.lower().endswith(".docx"):
-                            final_zip.writestr(
-                                f"docs/{base_inner_name}.docx",
-                                inner_zip.read(inner_name)
-                            )
-                        # else: skip non-docx/pdf files entirely
-    
-            except zipfile.BadZipFile:
-                # Skip invalid zip files gracefully
-                pass
-    
-    zip_buffer.seek(0)
-    return StreamingResponse(
-        zip_buffer,
-        media_type="application/zip",
-        headers={"Content-Disposition": "attachment; filename=documents.zip"}
-    )
         

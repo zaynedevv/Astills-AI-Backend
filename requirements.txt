@@ -32,5 +32,6 @@ python-multipart==0.0.20
 python-decouple==3.8
 httpx==0.28.1
 aiohttp==3.11.14
+docxtpl==0.20.2
 
 
