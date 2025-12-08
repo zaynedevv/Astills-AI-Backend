@@ -162,8 +162,8 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Purchase - Commercial/12. Company Guarantee Warranty.docx',
             'SMSF/Purchase - Commercial/13. Company Guarantee Warranty (ShareHolders).docx',
             'SMSF/Purchase - Commercial/16. Direct Debit Authority.docx',
-            'SMSF/Purchase - Commercial/11. Guarantee & Indemnity June 23.docx',
-            'SMSF/Purchase - Commercial/10. Guarantee Indemnity Bare Trustee June 23.docx',
+            'SMSF/Purchase - Commercial/11. Guarantee & Indemnity – SMSF Members.docx',
+            'SMSF/Purchase - Commercial/10. Guarantee & Indemnity – Bare Trustee.docx',
             'SMSF/Purchase - Commercial/7. Privacy Consent Form BC July 26 2024.docx',
             'SMSF/Purchase - Commercial/14. Warranties Fund Mortgaged Property June 23.docx',
             'SMSF/Purchase - Commercial/1. Credit Guide.docx',
@@ -196,14 +196,14 @@ DOCMOSIS_DIRECTORIES = {
 
     "SMSF/Refi-Commercial/": {
         'Borrowers-Checklist': {
-            "Non-Wetsign-NSW": "SMSF/Refi - Commercial/0. Borrowers Checklist SMSF Refi ILA Required COMMERCIAL.docx"
+            "Non-Wetsign-NSW": "SMSF/Refi - Commercial/0. Borrowers Checklist SMSF Refi (no ILA) COMMERCIAL.docx"
         },
          'Standard': [
             'SMSF/Refi - Commercial/12. Company Guarantee Warranty.docx',
             'SMSF/Refi - Commercial/13. Company Guarantee Warranty (ShareHolders).docx',
             'SMSF/Refi - Commercial/16. Direct Debit Authority.docx',
-            'SMSF/Refi - Commercial/11. Guarantee & Indemnity June 23.docx',
-            'SMSF/Refi - Commercial/10. Guarantee Indemnity Bare Trustee June 23.docx',
+            'SMSF/Refi - Commercial/11. Guarantee & Indemnity – SMSF Members.docx',
+            'SMSF/Refi - Commercial/10. Guarantee & Indemnity – Bare Trustee.docx',
             'SMSF/Refi - Commercial/7. Privacy Consent Form BC July 26 2024.docx',
             'SMSF/Refi - Commercial/14. Warranties Fund Mortgaged Property June 23.docx',
             'SMSF/Refi - Commercial/1. Credit Guide.docx',
