@@ -102,6 +102,7 @@ async def populate(
     directoryIndex = matter_type + '/' + transaction_type + '/' + lender + '/'
     if "Commercial" in transaction_type:
         directoryIndex = matter_type + '/' + transaction_type + '/'
+        transaction_type = transaction_type.split('-')[0]
     
     matterDirectories = DOCMOSIS_DIRECTORIES.get(directoryIndex)
 
@@ -125,6 +126,8 @@ async def populate(
 
 
     matterFiles.extend(matterDirectories.get('Standard', []))
+
+    
 
 
     #Matter files completed here
