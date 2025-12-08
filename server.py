@@ -151,7 +151,7 @@ async def populate(
             print("merged")
 
         # ---- INDIVIDUAL LEGAL ADVICE: BC Purchase ----
-        if lender == "BC" and transaction_type == "Purchase":
+        if lender == "BC" and 'Purchase' in transaction_type:
             template_path = "SMSF/Purchase/BC/17. Individual Legal Advice Certificate.docx"
             for director in matter_info["directors"]:
                 context = matter_info.copy()
@@ -171,7 +171,7 @@ async def populate(
                 zipf.writestr(filename, file_buffer.read())
 
         # ---- GUARANTOR LEGAL ADVICE WARRANTY: BC Refi ----
-        if lender == "BC" and transaction_type == "Refi":
+        if lender == "BC" and "Refi" in transaction_type:
             template_path = "SMSF/Refi/BC/12. Guarantor Legal Advice Warranty.docx"
             for director in matter_info["directors"]:
                 context = matter_info.copy()
