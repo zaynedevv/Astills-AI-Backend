@@ -9,7 +9,9 @@ from constants import DOCMOSIS_DIRECTORIES
 from fastapi.responses import StreamingResponse
 from docxtpl import DocxTemplate
 from io import BytesIO
+from docx2pdf import convert
 import zipfile
+from helpers import write_docx_and_pdf
 
 
 from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async
@@ -147,7 +149,7 @@ async def populate(
             doc_temp.save(file_buffer)
             file_buffer.seek(0)
 
-            zipf.writestr(fileName, file_buffer.read())
+            write_docx_and_pdf(zipf, fileName, file_buffer.read())
             print("merged")
 
         # ---- INDIVIDUAL LEGAL ADVICE: BC Purchase ----
@@ -168,7 +170,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+                write_docx_and_pdf(zipf, filename, file_buffer.read())
 
         # ---- GUARANTOR LEGAL ADVICE WARRANTY: BC Refi ----
         if lender == "BC" and "Refi" in transaction_type:
@@ -188,7 +190,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+                write_docx_and_pdf(zipf, filename, file_buffer.read())
 
         # ---- SOURCE PURCHASE (not NSW) ----
         if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] != "NSW":
@@ -208,7 +210,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+                write_docx_and_pdf(zipf, filename, file_buffer.read())
 
         # ---- SOURCE PURCHASE (NSW) ----
         if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] == "NSW":
@@ -228,7 +230,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+                write_docx_and_pdf(zipf, filename, file_buffer.read())
 
     # FINAL ZIP RESPONSE
     zip_buffer.seek(0)

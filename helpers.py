@@ -3,6 +3,9 @@ import aiohttp
 import asyncio
 import httpx
 from typing import List, Dict, Any
+from docx2pdf import convert
+import zipfile
+import tempfile
 
 DOCMOSIS_API_URL = "https://au1.dws4.docmosis.com/api/getSampleData"
 ACCESS_KEY = "MjlmMWJhYzItNTZiZS00MzM2LWIyNGQtNGMwMGQ1NGE3OTU1OjQ4NjcyOTEwNQ"
@@ -19,6 +22,36 @@ def getBorrowerChecklist(state, transaction_type, directories):
         return directories['Borrowers-Checklist']['NSW']
     else:
         return directories['Borrowers-Checklist']['Non-Wetsign-NSW']
+    
+
+
+
+def write_docx_and_pdf(zipf: zipfile.ZipFile, filename: str, docx_bytes: bytes):
+    """
+    Writes:
+      - docx/<filename>.docx
+      - pdf/<filename>.pdf
+    into the zip file
+    """
+
+    # ---- DOCX ----
+    zipf.writestr(f"docx/{filename}", docx_bytes)
+
+    # ---- PDF ----
+    with tempfile.TemporaryDirectory() as tmpdir:
+        docx_path = f"{tmpdir}/{filename}"
+        pdf_path = docx_path.replace(".docx", ".pdf")
+
+        with open(docx_path, "wb") as f:
+            f.write(docx_bytes)
+
+        convert(docx_path, pdf_path)
+
+        with open(pdf_path, "rb") as f:
+            zipf.writestr(
+                f"pdf/{filename.replace('.docx', '.pdf')}",
+                f.read()
+            )
 
 def structureJson(matter_info, jsonTemplates):
     for directory in jsonTemplates:
