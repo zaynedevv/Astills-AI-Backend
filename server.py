@@ -12,7 +12,8 @@ from io import BytesIO
 import zipfile
 
 
-from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async, convert_docx_bytes_to_pdf
+from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async
+from downloadaspdf import upload_file, delete_file, export_as_pdf
 
 import io
 import zipfile
@@ -145,19 +146,29 @@ async def populate(
 
             file_buffer = BytesIO()
             doc_temp.save(file_buffer)
+
+            # Upload directly from buffer
+            file_id = upload_file(file_buffer, fileName)
+
+            # Export PDF to temporary file (PDF export requires a file path)
+            pdf_output_path = f"/tmp/{fileName}.pdf"
+            export_as_pdf(file_id, pdf_output_path)
+
+            # Delete file from Drive
+            delete_file(file_id)
+
+            # Add DOCX to ZIP
             file_buffer.seek(0)
+            zipf.writestr(fileName, file_buffer.read())
 
-            docx_bytes = file_buffer.read()
+            # Add PDF to ZIP
+            with open(pdf_output_path, "rb") as pdf_file:
+                zipf.writestr(f"{fileName}.pdf", pdf_file.read())
 
-            # Convert DOCX to PDF
-            pdf_bytes = convert_docx_bytes_to_pdf(docx_bytes)
+            print("Merged DOCX and PDF into ZIP")
 
-            # Write both DOCX and PDF to ZIP
-            zipf.writestr(f"docx/{fileName}", docx_bytes)
-            zipf.writestr(f"pdf/{fileName.replace('.docx', '.pdf')}", pdf_bytes)
-
-            # zipf.writestr(fileName, file_buffer.read())
-            print("merged")
+            # Clean up temporary PDF
+            os.remove(pdf_output_path)
 
         # ---- INDIVIDUAL LEGAL ADVICE: BC Purchase ----
         if lender == "BC" and 'Purchase' in transaction_type:
@@ -177,16 +188,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-
-                docx_bytes = file_buffer.read()
-
-                # Convert DOCX to PDF
-                pdf_bytes = convert_docx_bytes_to_pdf(docx_bytes)
-
-                # Write both DOCX and PDF to ZIP
-                zipf.writestr(f"docx/{fileName}", docx_bytes)
-                zipf.writestr(f"pdf/{fileName.replace('.docx', '.pdf')}", pdf_bytes)
-                # zipf.writestr(filename, file_buffer.read())
+                zipf.writestr(filename, file_buffer.read())
 
         # ---- GUARANTOR LEGAL ADVICE WARRANTY: BC Refi ----
         if lender == "BC" and "Refi" in transaction_type:
@@ -206,15 +208,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                docx_bytes = file_buffer.read()
-
-                # Convert DOCX to PDF
-                pdf_bytes = convert_docx_bytes_to_pdf(docx_bytes)
-
-                # Write both DOCX and PDF to ZIP
-                zipf.writestr(f"docx/{fileName}", docx_bytes)
-                zipf.writestr(f"pdf/{fileName.replace('.docx', '.pdf')}", pdf_bytes)
-                # zipf.writestr(filename, file_buffer.read())
+                zipf.writestr(filename, file_buffer.read())
 
         # ---- SOURCE PURCHASE (not NSW) ----
         if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] != "NSW":
@@ -234,15 +228,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                docx_bytes = file_buffer.read()
-
-                # Convert DOCX to PDF
-                pdf_bytes = convert_docx_bytes_to_pdf(docx_bytes)
-
-                # Write both DOCX and PDF to ZIP
-                zipf.writestr(f"docx/{fileName}", docx_bytes)
-                zipf.writestr(f"pdf/{fileName.replace('.docx', '.pdf')}", pdf_bytes)
-                    # zipf.writestr(filename, file_buffer.read())
+                zipf.writestr(filename, file_buffer.read())
 
         # ---- SOURCE PURCHASE (NSW) ----
         if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] == "NSW":
@@ -262,15 +248,7 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                docx_bytes = file_buffer.read()
-
-                # Convert DOCX to PDF
-                pdf_bytes = convert_docx_bytes_to_pdf(docx_bytes)
-
-                # Write both DOCX and PDF to ZIP
-                zipf.writestr(f"docx/{fileName}", docx_bytes)
-                zipf.writestr(f"pdf/{fileName.replace('.docx', '.pdf')}", pdf_bytes)
-                # zipf.writestr(filename, file_buffer.read())
+                zipf.writestr(filename, file_buffer.read())
 
     # FINAL ZIP RESPONSE
     zip_buffer.seek(0)
