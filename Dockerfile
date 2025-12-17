@@ -1,33 +1,23 @@
-# syntax=docker/dockerfile:1.4
+# Start from LibreOffice prebuilt image
+FROM libreoffice/office:7.6.7.2
 
-ARG BUILDKIT_INLINE_CACHE=0
-
-FROM python:3.11-slim-bullseye
-
+# Set working directory
 WORKDIR /app
 
+# Install Python + pip (if not included)
+RUN apt-get update && \
+    apt-get install -y python3 python3-pip && \
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-
+# Copy Python dependencies
 COPY requirements.txt .
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    libreoffice-core \
-    libreoffice-writer \
-    libreoffice-calc \
-    libreoffice-impress \
-    libreoffice-common \
-    libreoffice-headless \
-    libreoffice-java-common \
-    fonts-dejavu \
-    fonts-liberation \
-    libsm6 libxrender1 libxext6 \
-    wget unzip curl \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
-
-RUN pip install --no-cache-dir -r requirements.txt
-
+# Copy your FastAPI app code
 COPY . .
 
+# Expose the port FastAPI will run on
+EXPOSE 8080
+
+# Start FastAPI server
 CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "8080"]
