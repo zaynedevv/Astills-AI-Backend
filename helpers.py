@@ -7,6 +7,41 @@ from docx2pdf import convert
 import zipfile
 import tempfile
 
+import subprocess
+import os
+from pathlib import Path
+
+
+def convert_docx_bytes_to_pdf(docx_bytes: bytes) -> bytes:
+    """
+    Convert DOCX bytes to PDF bytes using LibreOffice headless.
+    """
+    import tempfile
+
+    with tempfile.TemporaryDirectory() as tmpdir:
+        docx_path = Path(tmpdir) / "temp.docx"
+        pdf_path = Path(tmpdir) / "temp.pdf"
+
+        # Write DOCX bytes to temp file
+        with open(docx_path, "wb") as f:
+            f.write(docx_bytes)
+
+        # Convert to PDF
+        subprocess.run([
+            "soffice",
+            "--headless",
+            "--convert-to", "pdf",
+            "--outdir", str(tmpdir),
+            str(docx_path)
+        ], check=True)
+
+        # Read PDF bytes
+        with open(pdf_path, "rb") as f:
+            pdf_bytes = f.read()
+
+    return pdf_bytes
+
+
 DOCMOSIS_API_URL = "https://au1.dws4.docmosis.com/api/getSampleData"
 ACCESS_KEY = "MjlmMWJhYzItNTZiZS00MzM2LWIyNGQtNGMwMGQ1NGE3OTU1OjQ4NjcyOTEwNQ"
 
@@ -26,32 +61,7 @@ def getBorrowerChecklist(state, transaction_type, directories):
 
 
 
-def write_docx_and_pdf(zipf: zipfile.ZipFile, filename: str, docx_bytes: bytes):
-    """
-    Writes:
-      - docx/<filename>.docx
-      - pdf/<filename>.pdf
-    into the zip file
-    """
 
-    # ---- DOCX ----
-    zipf.writestr(f"docx/{filename}", docx_bytes)
-
-    # ---- PDF ----
-    with tempfile.TemporaryDirectory() as tmpdir:
-        docx_path = f"{tmpdir}/{filename}"
-        pdf_path = docx_path.replace(".docx", ".pdf")
-
-        with open(docx_path, "wb") as f:
-            f.write(docx_bytes)
-
-        convert(docx_path, pdf_path)
-
-        with open(pdf_path, "rb") as f:
-            zipf.writestr(
-                f"pdf/{filename.replace('.docx', '.pdf')}",
-                f.read()
-            )
 
 def structureJson(matter_info, jsonTemplates):
     for directory in jsonTemplates:
