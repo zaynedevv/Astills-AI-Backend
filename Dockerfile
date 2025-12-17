@@ -2,7 +2,7 @@
 
 ARG BUILDKIT_INLINE_CACHE=0
 
-FROM python:3.11-slim
+FROM python:3.11-slim-bullseye
 
 WORKDIR /app
 
@@ -10,24 +10,21 @@ WORKDIR /app
 
 COPY requirements.txt .
 
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libreoffice-core \
+    libreoffice-writer \
+    libreoffice-calc \
+    libreoffice-impress \
+    libreoffice-common \
+    libreoffice-headless \
+    libreoffice-java-common \
+    fonts-dejavu \
+    fonts-liberation \
+    libsm6 libxrender1 libxext6 \
+    wget unzip curl \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install dependencies for LibreOffice
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-        libreoffice \
-        libreoffice-writer \
-        fonts-dejavu \
-        fonts-liberation \
-        default-jre \
-        libx11-6 \
-        libglib2.0-0 \
-        wget \
-        unzip \
-        curl \
-        python3-pip \
-        xz-utils \
-        ghostscript && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
 
 RUN pip install --no-cache-dir -r requirements.txt
 
