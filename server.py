@@ -12,8 +12,8 @@ from io import BytesIO
 import zipfile
 
 
-from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async
-from downloadaspdf import upload_file, delete_file, export_as_pdf
+
+from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async, convert_docx_bytes_to_pdf
 
 import io
 import zipfile
@@ -146,29 +146,20 @@ async def populate(
 
             file_buffer = BytesIO()
             doc_temp.save(file_buffer)
+            file_buffer.seek(0)
+            docx_bytes = file_buffer.read()
 
-            # Upload directly from buffer
-            file_id = upload_file(file_buffer, fileName)
-
-            # Export PDF to temporary file (PDF export requires a file path)
-            pdf_output_path = f"/tmp/{fileName}.pdf"
-            export_as_pdf(file_id, pdf_output_path)
-
-            # Delete file from Drive
-            delete_file(file_id)
+            # Convert DOCX bytes to PDF bytes using your function
+            pdf_bytes = convert_docx_bytes_to_pdf(docx_bytes)
 
             # Add DOCX to ZIP
-            file_buffer.seek(0)
-            zipf.writestr(fileName, file_buffer.read())
+            zipf.writestr(f"docx/{fileName}", docx_bytes)
 
-            # Add PDF to ZIP
-            with open(pdf_output_path, "rb") as pdf_file:
-                zipf.writestr(f"{fileName}.pdf", pdf_file.read())
+            # Add PDF to ZIP (same name, different folder)
+            pdf_file_name = fileName.replace(".docx", ".pdf")
+            zipf.writestr(f"pdf/{pdf_file_name}", pdf_bytes)
 
-            print("Merged DOCX and PDF into ZIP")
-
-            # Clean up temporary PDF
-            os.remove(pdf_output_path)
+            print("merged DOCX and converted PDF")
 
         # ---- INDIVIDUAL LEGAL ADVICE: BC Purchase ----
         if lender == "BC" and 'Purchase' in transaction_type:
