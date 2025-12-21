@@ -16,9 +16,9 @@ import requests
 
 def upload_convert_delete(fileName: str, fileBytes: bytes, zipf: zipfile.ZipFile):
     # === CONFIGURATION ===
-    tenant_id = "afb330be-82e4-456b-87af-fe0655fdf86c"
-    client_id = "7dfd6962-1063-486d-90de-5ce1b6040aa1"
-    client_secret = "CLI8Q~a2Ryb7gfCK9ZnseMiB8iFZRfaUFVJ5Kc1l"
+    tenant_id = os.environ.get("AZURE_TENANT_ID")
+    client_id = os.environ.get("AZURE_CLIENT_ID")
+    client_secret = os.environ.get("AZURE_CLIENT_SECRET")
     user_id = "Zayne@astillcronin.com.au"
 
     # === 1️⃣ Get access token from Azure ===
