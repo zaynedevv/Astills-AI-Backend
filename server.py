@@ -13,7 +13,7 @@ import zipfile
 
 
 
-from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async, convert_docx_bytes_to_pdf
+from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async, upload_convert_delete
 
 import io
 import zipfile
@@ -93,8 +93,6 @@ async def populate(
     matter_info: dict = Body(...),  # MatterInfo is the Pydantic model
 ):
     
-    
-
     # print(str(matter_info))
 
     matter_info = matter_info['matter_info']
@@ -127,9 +125,6 @@ async def populate(
 
     matterFiles.extend(matterDirectories.get('Standard', []))
 
-    
-
-
     #Matter files completed here
     
     zip_buffer = BytesIO()
@@ -148,16 +143,12 @@ async def populate(
             doc_temp.save(file_buffer)
             file_buffer.seek(0)
             docx_bytes = file_buffer.read()
-
-            # Convert DOCX bytes to PDF bytes using your function
-            pdf_bytes = convert_docx_bytes_to_pdf(docx_bytes)
-
             # Add DOCX to ZIP
             zipf.writestr(f"docx/{fileName}", docx_bytes)
 
             # Add PDF to ZIP (same name, different folder)
-            pdf_file_name = fileName.replace(".docx", ".pdf")
-            zipf.writestr(f"pdf/{pdf_file_name}", pdf_bytes)
+            upload_convert_delete(fileName, docx_bytes, zipf)
+         
 
             print("merged DOCX and converted PDF")
 
@@ -179,7 +170,10 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+                docx_bytes = file_buffer.read()
+
+                upload_convert_delete(filename, docx_bytes, zipf)
+                zipf.writestr(f"docx/{filename}", file_buffer.read())
 
         # ---- GUARANTOR LEGAL ADVICE WARRANTY: BC Refi ----
         if lender == "BC" and "Refi" in transaction_type:
@@ -199,7 +193,11 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+
+                docx_bytes = file_buffer.read()
+
+                upload_convert_delete(filename, docx_bytes, zipf)
+                zipf.writestr(f"docx/{filename}", file_buffer.read())
 
         # ---- SOURCE PURCHASE (not NSW) ----
         if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] != "NSW":
@@ -219,7 +217,11 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+
+                docx_bytes = file_buffer.read()
+
+                upload_convert_delete(filename, docx_bytes, zipf)
+                zipf.writestr(f"docx/{filename}", file_buffer.read())
 
         # ---- SOURCE PURCHASE (NSW) ----
         if lender == "Source" and transaction_type == "Purchase" and matter_info["property_state"] == "NSW":
@@ -239,7 +241,11 @@ async def populate(
                 file_buffer = BytesIO()
                 doc_temp.save(file_buffer)
                 file_buffer.seek(0)
-                zipf.writestr(filename, file_buffer.read())
+
+                docx_bytes = file_buffer.read()
+
+                upload_convert_delete(filename, docx_bytes, zipf)
+                zipf.writestr(f"docx/{filename}", file_buffer.read())
 
     # FINAL ZIP RESPONSE
     zip_buffer.seek(0)

@@ -12,6 +12,63 @@ import os
 from pathlib import Path
 
 
+import requests
+
+def upload_convert_delete(fileName: str, fileBytes: bytes, zipf: zipfile.ZipFile):
+    # === CONFIGURATION ===
+    tenant_id = "afb330be-82e4-456b-87af-fe0655fdf86c"
+    client_id = "7dfd6962-1063-486d-90de-5ce1b6040aa1"
+    client_secret = "CLI8Q~a2Ryb7gfCK9ZnseMiB8iFZRfaUFVJ5Kc1l"
+    user_id = "Zayne@astillcronin.com.au"
+
+    # === 1️⃣ Get access token from Azure ===
+    token_url = f"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token"
+    token_data = {
+        "grant_type": "client_credentials",
+        "client_id": client_id,
+        "client_secret": client_secret,
+        "scope": "https://graph.microsoft.com/.default"
+    }
+
+    resp = requests.post(token_url, data=token_data)
+    # resp.raise_for_status()
+    access_token = resp.json()["access_token"]
+
+    headers_docx = {
+        "Authorization": f"Bearer {access_token}",
+        "Content-Type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    }
+
+    # === 2️⃣ Upload the DOCX file ===
+    upload_url = f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/root:/{fileName}:/content"
+    upload_resp = requests.put(upload_url, headers=headers_docx, data=fileBytes)
+    # upload_resp.raise_for_status()
+    print(f"Uploaded {fileName} successfully!")
+
+    # === 3️⃣ Export as PDF ===
+    pdf_file_name = fileName.rsplit('.', 1)[0] + ".pdf"
+    export_url = f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/root:/{fileName}:/content?format=pdf"
+    headers_pdf = {"Authorization": f"Bearer {access_token}"}
+    export_resp = requests.get(export_url, headers=headers_pdf)
+    # export_resp.raise_for_status()
+
+    zipf.writestr(f"pdf/{pdf_file_name}", export_resp.content)
+
+    # Save the PDF locally
+    with open(pdf_file_name, "wb") as f:
+        f.write(export_resp.content)
+    print(f"Exported {pdf_file_name} successfully!")
+
+    # === 4️⃣ Delete the DOCX file from OneDrive ===
+    delete_url = f"https://graph.microsoft.com/v1.0/users/{user_id}/drive/root:/{fileName}"
+    delete_resp = requests.delete(delete_url, headers={"Authorization": f"Bearer {access_token}"})
+    # delete_resp.raise_for_status()
+
+    os.remove(pdf_file_name)
+    print(f"Deleted {fileName} successfully!")
+
+
+
 def convert_docx_bytes_to_pdf(docx_bytes: bytes) -> bytes:
     """
     Convert DOCX bytes to PDF bytes using LibreOffice headless.
