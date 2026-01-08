@@ -133,6 +133,8 @@ async def populate(
 
         # ---- MAIN TEMPLATE FILES ----
         for file in matterFiles:
+            if not file:
+                continue
             fileName = file.split('/')[-1]
             print("Processing File: " + fileName)
 
