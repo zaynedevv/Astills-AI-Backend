@@ -139,7 +139,7 @@ async def populate(
             print("Processing File: " + fileName)
 
             doc_temp = DocxTemplate(file)
-            doc_temp.render(matter_info)
+            doc_temp.render(matter_info, autoescape=True)
 
             file_buffer = BytesIO()
             doc_temp.save(file_buffer)
@@ -162,7 +162,7 @@ async def populate(
                 context.update(director)
 
                 doc_temp = DocxTemplate(template_path)
-                doc_temp.render(context)
+                doc_temp.render(context, autoescape=True)
 
                 filename = (
                     template_path.split('/')[-1][:-5]
@@ -185,7 +185,7 @@ async def populate(
                 context.update(director)
 
                 doc_temp = DocxTemplate(template_path)
-                doc_temp.render(context)
+                doc_temp.render(context, autoescape=True)
 
                 filename = (
                     template_path.split('/')[-1][:-5]
@@ -209,7 +209,7 @@ async def populate(
                 context.update(director)
 
                 doc_temp = DocxTemplate(template_path)
-                doc_temp.render(context)
+                doc_temp.render(context, autoescape=True)
 
                 filename = (
                     template_path.split('/')[-1][:-5]
@@ -233,7 +233,7 @@ async def populate(
                 context.update(director)
 
                 doc_temp = DocxTemplate(template_path)
-                doc_temp.render(context)
+                doc_temp.render(context, autoescape=True)
 
                 filename = (
                     template_path.split('/')[-1][:-5]
