@@ -4,6 +4,7 @@ from extraction import process_document_sample
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
+from jinja2 import Environment
 from populateTemplate import populateFile, getTemplateStucture
 from constants import DOCMOSIS_DIRECTORIES
 from fastapi.responses import StreamingResponse
