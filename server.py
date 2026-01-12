@@ -176,7 +176,7 @@ async def populate(
                 docx_bytes = file_buffer.read()
 
                 upload_convert_delete(filename, docx_bytes, zipf)
-                zipf.writestr(f"docx/{filename}", file_buffer.read())
+                zipf.writestr(f"docx/{filename}", docx_bytes)
 
         # ---- GUARANTOR LEGAL ADVICE WARRANTY: BC Refi ----
         if lender == "BC" and "Refi" in transaction_type:
