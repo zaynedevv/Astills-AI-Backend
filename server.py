@@ -11,6 +11,7 @@ from fastapi.responses import StreamingResponse
 from docxtpl import DocxTemplate
 from io import BytesIO
 import zipfile
+import re
 
 
 
@@ -152,8 +153,7 @@ async def populate(
 
             # Add DOCX to ZIP
             if 'Loan Agreement Offer' in fileName:
-                fileName = fileName.split(".docx")[0].split(" ", 1)[-1] + ".docx"
-
+                fileName = 'Loan Agreement Offer.docx'
             zipf.writestr(f"docx/{fileName}", docx_bytes)
 
             # Add PDF to ZIP (same name, different folder)
