@@ -149,12 +149,10 @@ async def populate(
             doc_temp.save(file_buffer)
             file_buffer.seek(0)
             docx_bytes = file_buffer.read()
-            
+
             # Add DOCX to ZIP
-            if ('Loan Agreement' in fileName and 'BC' in lender):
-                fileName = '5. Loan Agreement Offer.docx'
-            elif ('Loan Agreement' in fileName and 'Source' in lender):
-                fileName = '4. Loan Agreement Offer.docx'
+            if 'Loan Agreement Offer' in fileName:
+                fileName = fileName.split(".docx")[0].split(" ", 1)[-1] + ".docx"
 
             zipf.writestr(f"docx/{fileName}", docx_bytes)
 
