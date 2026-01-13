@@ -2,8 +2,8 @@
 DOCMOSIS_DIRECTORIES = {
     'SMSF/Purchase/BC/' : {
         'Borrowers-Checklist': {
-            'Wetsign': 'SMSF/Purchase/BC/WetSign/0. Borrowers Checklist SMSF Purchase Wet sign Mortgage.docx',
-            'NSW': 'SMSF/Purchase/BC/NSW/0. Borrowers Checklist SMSF NSW Purchase.docx',
+            'Wetsign': 'SMSF/Purchase/BC/WetSign/0. Borrowers Checklist.docx',
+            'NSW': 'SMSF/Purchase/BC/NSW/0. Borrowers Checklist.docx',
             'Non-Wetsign-NSW': 'SMSF/Purchase/BC/0. Borrowers Checklist.docx',
         },
         'Standard': [
@@ -42,8 +42,8 @@ DOCMOSIS_DIRECTORIES = {
     },
     'SMSF/Refi/BC/': {
       'Borrowers-Checklist': {
-            'Wetsign': 'SMSF/Refi/BC/WetSign/0. Borrowers Checklist SMSF Refi Hybrid (wet sign mortgage).docx',
-            'Non-Wetsign-NSW': 'SMSF/Refi/BC/0. Borrowers Checklist SMSF Refi (no ILA).docx',
+            'Wetsign': 'SMSF/Refi/BC/WetSign/0. Borrowers Checklist.docx',
+            'Non-Wetsign-NSW': 'SMSF/Refi/BC/0. Borrowers Checklist.docx',
         },
         'Standard': [
             'SMSF/Refi/BC/12. Company Guarantee Warranty.docx',
@@ -52,8 +52,8 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Refi/BC/15. Disbursement Direction Authority Refi.docx',
             'SMSF/Refi/BC/11. Guarantee & Indemnity – SMSF Members.docx',
             'SMSF/Refi/BC/10. Guarantee & Indemnity – Bare Trustee.docx',
-            'SMSF/Refi/BC/7. Privacy Consent Form BC July 26 2024.docx',
-            'SMSF/Refi/BC/14. Warranties Fund Mortgaged Property June 23.docx',
+            'SMSF/Refi/BC/7. Privacy Consent Form.docx',
+            'SMSF/Refi/BC/14. Warranties Fund Mortgaged Property.docx',
             'SMSF/Refi/BC/1. Credit Guide.docx',
             'SMSF/Refi/BC/2. Loan Agreement - Terms and Conditions.docx',
             'SMSF/Refi/BC/3. Mortgage Common Provisions.docx',
@@ -155,8 +155,8 @@ DOCMOSIS_DIRECTORIES = {
 
     "SMSF/Purchase-Commercial/": {
         'Borrowers-Checklist': {
-            "NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist - Purchase NSW - COMMERCIAL.docx",
-            "Non-Wetsign-NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist - Purchase - COMMERCIAL.docx"
+            "NSW": "SMSF/Purchase - Commercial/NSW/0. Borrowers Checklist.docx",
+            "Non-Wetsign-NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist.docx"
         },
          'Standard': [
             'SMSF/Purchase - Commercial/12. Company Guarantee Warranty.docx',
@@ -164,8 +164,8 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Purchase - Commercial/16. Direct Debit Authority.docx',
             'SMSF/Purchase - Commercial/11. Guarantee & Indemnity – SMSF Members.docx',
             'SMSF/Purchase - Commercial/10. Guarantee & Indemnity – Bare Trustee.docx',
-            'SMSF/Purchase - Commercial/7. Privacy Consent Form BC July 26 2024.docx',
-            'SMSF/Purchase - Commercial/14. Warranties Fund Mortgaged Property June 23.docx',
+            'SMSF/Purchase - Commercial/7. Privacy Consent Form.docx',
+            'SMSF/Purchase - Commercial/14. Warranties Fund Mortgaged Property.docx',
             'SMSF/Purchase - Commercial/1. Credit Guide.docx',
             'SMSF/Purchase - Commercial/2. Loan Agreement - Terms and Conditions.docx',
             'SMSF/Purchase - Commercial/3. Mortgage Common Provisions.docx',
@@ -196,7 +196,7 @@ DOCMOSIS_DIRECTORIES = {
 
     "SMSF/Refi-Commercial/": {
         'Borrowers-Checklist': {
-            "Non-Wetsign-NSW": "SMSF/Refi - Commercial/0. Borrowers Checklist SMSF Refi (no ILA) COMMERCIAL.docx"
+            "Non-Wetsign-NSW": "SMSF/Refi - Commercial/0. Borrowers Checklist.docx"
         },
          'Standard': [
             'SMSF/Refi - Commercial/12. Company Guarantee Warranty.docx',
@@ -204,8 +204,8 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Refi - Commercial/16. Direct Debit Authority.docx',
             'SMSF/Refi - Commercial/11. Guarantee & Indemnity – SMSF Members.docx',
             'SMSF/Refi - Commercial/10. Guarantee & Indemnity – Bare Trustee.docx',
-            'SMSF/Refi - Commercial/7. Privacy Consent Form BC July 26 2024.docx',
-            'SMSF/Refi - Commercial/14. Warranties Fund Mortgaged Property June 23.docx',
+            'SMSF/Refi - Commercial/7. Privacy Consent Form.docx',
+            'SMSF/Refi - Commercial/14. Warranties Fund Mortgaged Property.docx',
             'SMSF/Refi - Commercial/1. Credit Guide.docx',
             'SMSF/Refi - Commercial/2. Loan Agreement - Terms and Conditions.docx',
             'SMSF/Refi - Commercial/3. Mortgage Common Provisions.docx',
