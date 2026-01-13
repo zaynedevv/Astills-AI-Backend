@@ -2,8 +2,8 @@
 DOCMOSIS_DIRECTORIES = {
     'SMSF/Purchase/BC/' : {
         'Borrowers-Checklist': {
-            'Wetsign': 'SMSF/Purchase/BC/WetSign/0. Borrowers Checklist.docx',
-            'NSW': 'SMSF/Purchase/BC/NSW/0. Borrowers Checklist.docx',
+            'Wetsign': 'SMSF/Purchase/BC/WetSign/0. Borrowers Checklist Wetsign.docx',
+            'NSW': 'SMSF/Purchase/BC/NSW/0. Borrowers Checklist NSW.docx',
             'Non-Wetsign-NSW': 'SMSF/Purchase/BC/0. Borrowers Checklist.docx',
         },
         'Standard': [
@@ -42,7 +42,7 @@ DOCMOSIS_DIRECTORIES = {
     },
     'SMSF/Refi/BC/': {
       'Borrowers-Checklist': {
-            'Wetsign': 'SMSF/Refi/BC/WetSign/0. Borrowers Checklist.docx',
+            'Wetsign': 'SMSF/Refi/BC/WetSign/0. Borrowers Checklist Wetsign.docx',
             'Non-Wetsign-NSW': 'SMSF/Refi/BC/0. Borrowers Checklist.docx',
         },
         'Standard': [
@@ -155,7 +155,7 @@ DOCMOSIS_DIRECTORIES = {
 
     "SMSF/Purchase-Commercial/": {
         'Borrowers-Checklist': {
-            "NSW": "SMSF/Purchase - Commercial/NSW/0. Borrowers Checklist.docx",
+            "NSW": "SMSF/Purchase - Commercial/NSW/0. Borrowers Checklist NSW.docx",
             "Non-Wetsign-NSW": "SMSF/Purchase - Commercial/0. Borrowers Checklist.docx"
         },
          'Standard': [
