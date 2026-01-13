@@ -13,7 +13,7 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Purchase/BC/15. Disbursement Direction Authority Purchase.docx',
             'SMSF/Purchase/BC/11. Guarantee & Indemnity – SMSF Members.docx',
             'SMSF/Purchase/BC/10. Guarantee & Indemnity – Bare Trustee.docx',
-            'SMSF/Purchase/BC/7. Privacy Consent Form BC July 26 2024.docx',
+            'SMSF/Purchase/BC/7. Privacy Consent Form.docx',
             'SMSF/Purchase/BC/14. Warranties Fund Mortgaged Property June 23.docx',
             'SMSF/Purchase/BC/1. Credit Guide.docx',
             'SMSF/Purchase/BC/2. Loan Agreement - Terms and Conditions.docx',

@@ -136,7 +136,10 @@ async def populate(
         for file in matterFiles:
             if not file:
                 continue
+
+
             fileName = file.split('/')[-1]
+
             print("Processing File: " + fileName)
 
             doc_temp = DocxTemplate(file)
@@ -146,7 +149,13 @@ async def populate(
             doc_temp.save(file_buffer)
             file_buffer.seek(0)
             docx_bytes = file_buffer.read()
+            
             # Add DOCX to ZIP
+            if ('Loan Agreement' in fileName and 'BC' in lender):
+                fileName = '5. Loan Agreement Offer.docx'
+            elif ('Loan Agreement' in fileName and 'Source' in lender):
+                fileName = '4. Loan Agreement Offer.docx'
+
             zipf.writestr(f"docx/{fileName}", docx_bytes)
 
             # Add PDF to ZIP (same name, different folder)
