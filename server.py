@@ -160,6 +160,9 @@ async def populate(
             elif 'Loan Agreement' in fileName and 'Source' in lender:
                 fileName = '4. Loan Agreement.docx'
 
+            if 'Mortgage Form' in fileName and 'Source' in lender:
+                fileName='5. National Mortgage Form.docx'
+
             zipf.writestr(f"docx/{fileName}", docx_bytes)
 
             # Add PDF to ZIP (same name, different folder)
