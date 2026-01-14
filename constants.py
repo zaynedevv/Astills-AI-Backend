@@ -117,8 +117,8 @@ DOCMOSIS_DIRECTORIES = {
     },
     'SMSF/Refi/Source/': {
         'Borrowers-Checklist': {
-            'Wetsign': 'SMSF/Refi/Source/WetSign/0. Borrowers Checklist SMSF Refi (wet sign mortgage).docx',
-            'Non-Wetsign-NSW': 'SMSF/Refi/Source/0. Borrowers Checklist SMSF Refi (no ILA).docx',
+            'Wetsign': 'SMSF/Refi/Source/WetSign/0. Borrowers Checklist Wetsign.docx',
+            'Non-Wetsign-NSW': 'SMSF/Refi/Source/0. Borrowers Checklist.docx',
         },
         'Standard': [
             'SMSF/Refi/Source/1. Credit Guide.docx',
