@@ -15,7 +15,7 @@ import re
 
 
 
-from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async, upload_convert_delete
+from helpers import getBorrowerChecklist, structureJson, getTemplates, get_templates_async, generate_all_pdfs, populate_file_async, upload_convert_delete, sanitise_charges
 
 import io
 import zipfile
@@ -98,6 +98,9 @@ async def populate(
     # print(str(matter_info))
 
     matter_info = matter_info['matter_info']
+
+    matter_info["charges"] = sanitise_charges(matter_info["charges"])
+    print(matter_info["charges"])
     
     #Get Directories Associated with Matter Type
     directoryIndex = matter_type + '/' + transaction_type + '/' + lender + '/'
@@ -154,8 +157,8 @@ async def populate(
             # Add DOCX to ZIP
             if 'Loan Agreement Offer' in fileName and 'BC' in lender:
                 fileName = '5. Loan Agreement Offer.docx'
-            elif 'Loan Agreement Offer' in fileName and 'Source' in lender:
-                fileName = '4. Loan Agreement Offer.docx'
+            elif 'Loan Agreement' in fileName and 'Source' in lender:
+                fileName = '4. Loan Agreement.docx'
 
             zipf.writestr(f"docx/{fileName}", docx_bytes)
 

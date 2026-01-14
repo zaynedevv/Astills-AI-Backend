@@ -14,6 +14,45 @@ from pathlib import Path
 
 import requests
 
+def charges_contains_charge(charges, name):
+    return any(c["charge_name"] == name for c in charges)
+
+
+def sanitise_charges(charges):
+    new_charges = list(charges)  # copy to avoid mutating original
+
+    req_charges = [
+        ["Annual fee", "Annual facility fee"],
+        ["Application fee"],
+        ["Settlement fee"],
+        ["Valuation fee"],
+    ]
+
+    for aliases in req_charges:
+        # check if any alias exists
+        found = any(
+            charges_contains_charge(new_charges, alias)
+            for alias in aliases
+        )
+
+        # if none found → add first alias as default
+        if "Annual" in aliases[0]:
+            aliases[0] = "Annual fee (payable on the settlement date)"
+        if not found:
+            new_charges.append({
+                "charge_name": aliases[0],
+                "charge_amount": 0
+            })
+
+    return new_charges
+
+
+
+    
+
+
+    
+
 def upload_convert_delete(fileName: str, fileBytes: bytes, zipf: zipfile.ZipFile):
     # === CONFIGURATION ===
     tenant_id = os.environ.get("AZURE_TENANT_ID")
