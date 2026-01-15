@@ -38,11 +38,16 @@ def sanitise_charges(charges):
         # if none found → add first alias as default
         if "Annual" in aliases[0]:
             aliases[0] = "Annual fee (payable on the settlement date)"
+
         if not found:
             new_charges.append({
                 "charge_name": aliases[0],
                 "charge_amount": 0
             })
+        else:
+            next((o for o in arr if "Annual" in o.get("charge_name", "")), {}).update({"charge_name": "Annual fee (payable on the settlement date)"})
+
+
 
     return new_charges
 
