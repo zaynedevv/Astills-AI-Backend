@@ -125,7 +125,7 @@ DOCMOSIS_DIRECTORIES = {
             'SMSF/Refi/Source/2. Loan General Terms.docx',
             'SMSF/Refi/Source/3. Mortgage Common Provisions.docx',
             'SMSF/Refi/Source/11. Direct Debit Request.docx',
-            'SMSF/Refi/Source/10. Disbursement Direction Authority Source.docx',
+            'SMSF/Refi/Source/10. Disbursement Direction Authority.docx',
             'SMSF/Refi/Source/7. Guarantee & Indemnity – Holding Trustee.docx',
             'SMSF/Refi/Source/6. Privacy Policy Collection Notice.docx',
             'SMSF/Refi/Source/9. Refinance - Certificate (Legal and Financial Advice).docx',

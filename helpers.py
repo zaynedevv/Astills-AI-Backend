@@ -15,7 +15,7 @@ from pathlib import Path
 import requests
 
 def charges_contains_charge(charges, name):
-    return any(c["charge_name"] == name for c in charges)
+    return any(c["charge_name"].lower() == name.lower() for c in charges)
 
 
 def sanitise_charges(charges):
