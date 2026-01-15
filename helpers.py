@@ -45,7 +45,7 @@ def sanitise_charges(charges):
                 "charge_amount": 0
             })
         else:
-            next((o for o in arr if "Annual" in o.get("charge_name", "")), {}).update({"charge_name": "Annual fee (payable on the settlement date)"})
+            next((o for o in new_charges if "Annual" in o.get("charge_name", "")), {}).update({"charge_name": "Annual fee (payable on the settlement date)"})
 
 
 
